@@ -13,3 +13,93 @@
  *= require_tree .
  *= require_self
  */
+
+ ::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+body {
+ font-family: 'Guardian-EgypTT', serif;
+}
+
+.content {
+height: 100%;
+}
+
+.map {
+width: 500px;
+height: 500px;
+float: left;
+position: relative;
+}
+
+
+header {
+margin-left: 5%;
+border-bottom: solid grey 1px;
+}
+
+h1, h5 {
+margin-bottom: 0px;
+}
+
+.login-form-container {
+display: flex;
+justify-content: center;
+margin-top: 100px;
+background-color: mintcream;
+}
+
+.login-form {
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+.login-input {
+margin-left: 20px;
+}
+
+.login-form-box {
+background: white;
+padding: 20px;
+border-radius: 25px;
+  border: 2px solid black;
+}
+
+.header-link {
+text-decoration: none;
+color: black;
+}
+
+hr {
+border-bottom: 1px solid grey;
+}
+
+.session-submit {
+text-transform: capitalize;
+}
+
+.login-signup {
+display: flex;
+float: right;
+}
+header {
+  display: flex;
+  /* align-content: space-between; */
+  justify-content: space-between;
+}
+
+h1 {
+  color:#eb6d20 ;
+}
