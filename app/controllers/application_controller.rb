@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
 
   def require_logged_in
     unless current_user
-      render json: { base: ['yikes! Your creds lookin sketch!'] }, status: 401
+      render json: { base: ['yikes! Those creds lookin sketch!'] }, status: 401
     end
   end
 

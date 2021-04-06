@@ -10,7 +10,7 @@ const App = () => (
     <h1>mikEtsy</h1>
     <GreetingContainer />
     </header>
-    <Switch>
+    <Switch>          
       <Route exact path="/login" component={LogInFormContainer} />
       <Route exact path="/signup" component={SignUpFormContainer} />
     </Switch>
