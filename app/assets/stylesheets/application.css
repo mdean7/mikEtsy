@@ -21,18 +21,21 @@
 
 
 header {
-margin-left: 5%;
+margin: 0%;
 border-bottom: solid grey 1px;
+display: flex;
+justify-content: space-between;
 }
 
 h1 {
-  font-size: medium;
+ 
   margin-bottom: 0px;
   color:#eb6d20 
 }
 
 a {
-  font-size: small;
+  font-size: 13px;
+  align-self: center;
 }
 
 .login-form-container {
@@ -40,12 +43,6 @@ display: flex;
 justify-content: center;
 margin-top: 100px;
 background-color: mintcream;
-}
-
-header {
-  display: flex;
-  /* align-content: space-between; */
-  justify-content: space-between;
 }
 
 .login-form {
@@ -57,6 +54,10 @@ flex-direction: column;
 .login-input {
 margin-left: 20px;
 }
+
+.signup-input {
+  margin-left: 45px;
+  }
 
 .login-form-box {
 background: white;
