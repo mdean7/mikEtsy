@@ -45,13 +45,13 @@ class SessionForm extends React.Component {
       </label>
 
     );
-    if (this.props.formType === "sign in") {
+    if (this.props.formType === "Sign in") {
       emailField = null;
     }
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          {this.props.formType} or {this.props.otherForm}
+          {this.props.formType}  {this.props.otherForm}
           <br />
           {this.renderErrors()}
           <div className="login-form">
