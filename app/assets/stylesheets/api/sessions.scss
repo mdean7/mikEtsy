@@ -6,6 +6,17 @@
 .error-img{
 background-image: asset-url('etsyUhOhpage.JPG');
   background-repeat: no-repeat;
-  height: 2150px;
+  height: 1150px;
   width: 2550px;
+}
+
+
+.wut{
+  background-image: asset-url('wut.gif'); 
+  position: absolute;
+  top: 400px;
+  left: 730px;
+  height: 570px;
+  width: 700px;
+  z-index: 2;
 }
