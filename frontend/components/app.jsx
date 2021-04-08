@@ -8,6 +8,7 @@ import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute } from '../util/route_util';
 import ProductIndex from './products/productIndex'
 import NotFound from './pagenotfound/notFound'
+import ProductShow from './products/productsShow'
 
 
 
@@ -21,7 +22,8 @@ const App = () => (
     <GreetingContainer />
     </header>
       
-      <Switch>     
+      <Switch>
+        <Route exact path="/show" component={ProductShow}/>     
         <Route exact path="/" component={ProductIndex}/>
         <Route component={NotFound} />
       </Switch>
