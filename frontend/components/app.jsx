@@ -6,15 +6,9 @@ import GreetingContainer from "./greeting/greeting_container";
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute } from '../util/route_util';
+import ProductIndex from './products/productIndex'
+import NotFound from './pagenotfound/notFound'
 
-
-const NoMatchPage = () => {
-  return (
-    <div className='error-img'>
-    
-    </div>
-  );
-};
 
 
 const App = () => (
@@ -26,16 +20,10 @@ const App = () => (
     </Link>
     <GreetingContainer />
     </header>
-    <div className="divideBar"></div>
-    <div className="colorBar">
-      <h1 className="mothersDay">Because every mom deserves something as unique as she is.</h1>
-      <h2 className="shopMothers">Shop Mother’s Day</h2>
-    </div>
-      <p className="recentImages"></p>
-      <Switch>
-      {/* <AuthRoute exact path="/login" component={} />
-      <AuthRoute exact path="/signup" component={} />  */}
-      <Route component={NoMatchPage} />
+      
+      <Switch>     
+        <Route exact path="/" component={ProductIndex}/>
+        <Route component={NotFound} />
       </Switch>
   </div>
 );

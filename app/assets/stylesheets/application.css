@@ -315,9 +315,10 @@ hr {
 
 .error-img {
   position: fixed;
-  top: 45%; 
+  top: 0; 
   left: 0; 
   width: 200%; 
   height: 300%;
+  z-index: 100;
 }
 
