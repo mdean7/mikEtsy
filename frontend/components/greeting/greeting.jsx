@@ -7,10 +7,7 @@ import { closeModal } from '../../actions/modal_actions';
 const Greeting = ({ currentUser, logout, openModal, closeModal }) => {
   const sessionLinks = () => (
     <nav className="login-signup">
-      {/* <Link to="/login">Sign in</Link> */}
-      <button onClick={() => openModal('login')}>sign in</button>
-      {/* &nbsp;or&nbsp;
-      <button onClick={() => openModal('signup')}>Signup</button> */}
+      <button onClick={() => openModal('login')}>sign in</button>     
     </nav>
   );
   const personalGreeting = () => {

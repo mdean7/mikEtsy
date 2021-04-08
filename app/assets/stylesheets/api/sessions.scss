@@ -6,8 +6,10 @@
 .error-img{
 background-image: asset-url('etsyUhOhpage.JPG');
   background-repeat: no-repeat;
+  margin-top: 90px;
   height: 1150px;
   width: 2550px;
+  
 }
 
 
@@ -18,5 +20,5 @@ background-image: asset-url('etsyUhOhpage.JPG');
   left: 730px;
   height: 570px;
   width: 700px;
-  z-index: 2;
+  // z-index: 6;
 }
