@@ -19,14 +19,6 @@ class NotFound extends React.Component {
 
   render() {
 
-    // const NoMatchPage = () => {
-    //   return (
-    //     <div className='error-img'>
-        
-    //     </div>
-    //   );
-    // };    
-
     return (
       <div className='error-img'>
         
