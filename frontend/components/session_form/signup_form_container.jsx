@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { openModal, closeModal } from '../../actions/modal_actions';
-import { signup, clearSessionErrors } from '../../actions/session_actions';
+import { login, signup, clearSessionErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 const mapStateToProps = ({ errors }) => {
