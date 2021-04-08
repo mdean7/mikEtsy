@@ -7,6 +7,16 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute } from '../util/route_util';
 
+
+const NoMatchPage = () => {
+  return (
+    <div className='error-img'>
+    
+    </div>
+  );
+};
+
+
 const App = () => (
   <div>
     <Modal />
@@ -22,6 +32,11 @@ const App = () => (
       <h2 className="shopMothers">Shop Mother’s Day</h2>
     </div>
       <p className="recentImages"></p>
+      <Switch>
+      {/* <AuthRoute exact path="/login" component={} />
+      <AuthRoute exact path="/signup" component={} />  */}
+      <Route component={NoMatchPage} />
+      </Switch>
   </div>
 );
 

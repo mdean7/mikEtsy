@@ -82,6 +82,20 @@ button{
   background-color: rgb(240, 240, 240);
 } 
 
+.demoLogin:hover{ 
+color:white;
+
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
+
+animation: rainbow 8s ease infinite;}
+
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
 .login-form-container {
   display: flex;
   justify-content: center;
@@ -140,6 +154,18 @@ button{
 .header-link {
   text-decoration: none;
   color: black;
+}
+
+.header-name{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-family: "Guardian-EgypTT",serif;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    font-size: 32px;
+    line-height: 36px;
+    color: #222;
 }
 
 hr {
@@ -282,3 +308,16 @@ hr {
  background-color: #ddebe3;
  height: 200px;
 }
+
+.error-img{
+  background: url("./uhOh.JPG") ; 
+}
+
+.error-img {
+  position: fixed;
+  top: 45%; 
+  left: 0; 
+  width: 200%; 
+  height: 300%;
+}
+
