@@ -29,7 +29,7 @@ header {
 }
 
 h1 {  
-  margin-bottom: 0px;
+  margin: 0px;
   color:#eb6d20 
 }
 
@@ -113,7 +113,10 @@ button{
   padding-left: 12px;
   padding-right: 12px; 
  background-color: rgb(232, 240, 254);
+ width: 84%;
+
 }
+
 
 .login-form-box {
   box-shadow: 0 6px 36px rgb(34 34 34 / 33%);
@@ -130,7 +133,7 @@ button{
   position: relative;
   margin: auto;
   max-width: 580px;
-  width: 100%;
+  width: 300px;
   z-index: 10;
 }
 
@@ -244,4 +247,38 @@ hr {
   height: 20px;
   width: 100%;
   border-bottom: solid rgb(197, 197, 197) 2px;
+}
+
+.colorBar{
+  margin-top: 0%;
+  height: 100%;
+  color: black;
+  background-color: #fdebd2;
+  text-align: center;
+
+}
+.mothersDay {
+  padding-top: 15px;
+  color: black;
+  font-family: "Guardian-EgypTT",serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 36px;
+  background-color: #fdebd2;
+
+}
+.shopMothers{
+  font-weight: bold;
+  padding-bottom: 130px;
+  background-color: #fdebd2;
+  font-size: 15px;
+    line-height: 28px;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  font-weight: 500;
+}
+
+.recentImages{
+ margin-top: 50px;
+ background-color: #ddebe3;
+ height: 200px;
 }

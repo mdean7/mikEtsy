@@ -17,10 +17,11 @@ const App = () => (
     <GreetingContainer />
     </header>
     <div className="divideBar"></div>
-    {/* <Switch>          
-      <AuthRoute exact path="/login" component={LogInFormContainer} />
-      <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-    </Switch> */}
+    <div className="colorBar">
+      <h1 className="mothersDay">Because every mom deserves something as unique as she is.</h1>
+      <h2 className="shopMothers">Shop Mother’s Day</h2>
+    </div>
+      <p className="recentImages"></p>
   </div>
 );
 
