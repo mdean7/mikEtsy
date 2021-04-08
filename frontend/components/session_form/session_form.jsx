@@ -13,8 +13,8 @@ class SessionForm extends React.Component {
    if (this.props.errors.length > 0){
      this.props.clearSessionErrors() 
     };
-    
   }
+  
 
   update(field) {
     return (e) => this.setState({[field]: e.currentTarget.value});
@@ -24,6 +24,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
+  
   }
 
   handleDemo(e){
@@ -32,6 +33,7 @@ class SessionForm extends React.Component {
      username: 'Demo',
      password: '123456'
    })
+   this.props.closeModal()
   }
 
   renderErrors() {

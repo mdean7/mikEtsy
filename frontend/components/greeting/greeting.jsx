@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { closeModal } from '../../actions/modal_actions';
 
 
 
-const Greeting = ({ currentUser, logout, openModal }) => {
+const Greeting = ({ currentUser, logout, openModal, closeModal }) => {
   const sessionLinks = () => (
     <nav className="login-signup">
       {/* <Link to="/login">Sign in</Link> */}
@@ -12,12 +13,14 @@ const Greeting = ({ currentUser, logout, openModal }) => {
       <button onClick={() => openModal('signup')}>Signup</button> */}
     </nav>
   );
-  const personalGreeting = () => (
+  const personalGreeting = () => {
+    closeModal();
+    return(
     <hgroup className="header-group">
       <h2 className="header-name">Welcome back, {currentUser.username}!</h2>
       <button className="header-button" onClick={logout}>Sign out</button>
-    </hgroup>
-  );
+    </hgroup>)
+  };
 
   return currentUser ? personalGreeting() : sessionLinks();
 };
