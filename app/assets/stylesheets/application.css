@@ -21,15 +21,14 @@ body {
 
 header {
   margin: 0%;
-  border-bottom: solid grey 1px;
+  /* border-bottom: solid grey 1px; */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: white;
-  width: 100%;
+  
 }
 
-h1 {
-  
+h1 {  
   margin-bottom: 0px;
   color:#eb6d20 
 }
@@ -42,6 +41,47 @@ input {
   padding: 10px;
   margin: 10px;
 }
+
+button{
+    color: #222222;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    font-family: -apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    border-radius: 24px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    min-height: 48px;
+    min-width: 48px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 18px;
+    padding-right: 18px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 10;
+   
+  
+    transition: background .5s ease-in-out;
+    transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42),background 150ms ease-out,box-shadow 200ms ease-out;
+    
+}
+ button:hover{
+  background-size: 110%;
+  background-color: rgb(240, 240, 240);
+} 
+
 .login-form-container {
   display: flex;
   justify-content: center;
@@ -64,10 +104,9 @@ input {
   border-style: solid;
   border-width: 1px;
   border-radius: 6px;
-  color: #222222;
   font-size: 16px;
   line-height: 28px;
-  height: 40px;
+  height: 28px;
   outline: none;
   padding-top: 9px;
   padding-bottom: 9px;
@@ -77,6 +116,7 @@ input {
 }
 
 .login-form-box {
+  box-shadow: 0 6px 36px rgb(34 34 34 / 33%);
   background: white;
   padding: 18px;
   border-radius: 25px;
@@ -86,7 +126,12 @@ input {
   line-height: 18px;
   font-size: 13px;
   font-weight: 500;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.1px;  
+  position: relative;
+  margin: auto;
+  max-width: 580px;
+  width: 100%;
+  z-index: 10;
 }
 
 .header-link {
@@ -102,13 +147,9 @@ hr {
   background: none;
   border: none;
   color: white;
-  font: inherit;
   cursor: pointer;
   text-align: left;
-  outline: none;
-  text-decoration: none;
   -webkit-tap-highlight-color: transparent;
-  -webkit-appearance: none;
   font-family: -apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
   border-radius: 24px;
   display: inline-block;
@@ -153,8 +194,9 @@ hr {
   /* left: 100px; */
 }
 
-button.otherForm:hover{
-  transition: .1s ease-in;
+.otherForm:hover{
+  background:none;
+  transition: .1s ease-in-out;
   border: solid black 3px;
   /* color: rgba(255, 255, 255, 1); */
   box-shadow: 0 2px 5px rgba(25, 25, 26, 0.4);
@@ -168,7 +210,7 @@ button.otherForm:hover{
 .session-submit:hover{
   background-color: #272727;
   /*  Making button bigger on hover  */
-  transition: .1s ease-in;
+  transition: .1s ease-in-out;
   transform: scale(1.03) perspective(1px);
 }
 
@@ -183,7 +225,7 @@ button.otherForm:hover{
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(109, 109, 109, 0.7);
   z-index: 10;
 }
 
@@ -191,9 +233,15 @@ button.otherForm:hover{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -80%);
 }
 
 #currentForm{
   font-size: 20px;
+}
+
+.divideBar{
+  height: 20px;
+  width: 100%;
+  border-bottom: solid rgb(197, 197, 197) 2px;
 }
