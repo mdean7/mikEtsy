@@ -309,16 +309,13 @@ hr {
  height: 200px;
 }
 
-.error-img{
-  background: url("./uhOh.JPG") ; 
-}
-
-.error-img {
+/* .error-img{
+ 
+  background-image: asset-url('uhOh.jpg'); 
   position: fixed;
   top: 0; 
   left: 0; 
   width: 200%; 
   height: 300%;
-  z-index: 100;
-}
+} */
 
