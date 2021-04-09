@@ -1,6 +1,6 @@
 import React from "react";
-import {Link} from "react-router-dom"
-import ProductIndexItem from "./product_index_item"
+import { Link } from "react-router-dom";
+import ProductIndexItem from "./product_index_item";
 class ProductIndex extends React.Component {
   constructor(props) {
     super(props);

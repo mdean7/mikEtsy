@@ -6,9 +6,11 @@ import GreetingContainer from "./greeting/greeting_container";
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute } from '../util/route_util';
-import ProductIndex from './products/product_index_container'
+import ProductIndexContainer from './products/product_index_container'
+import ProductShowContainer from './products/product_show_container'
 import NotFound from './pagenotfound/notFound'
-import ProductShow from './products/product_show'
+import EditProductFormContainer from './products/edit_product_form_container';
+import CreateProductFormContainer from './products/create_product_form_container';
 
 
 
@@ -23,8 +25,10 @@ const App = () => (
     </header>
       
       <Switch>
-        <Route exact path="/show" component={ProductShow}/>     
-        <Route exact path="/" component={ProductIndex}/>
+        <Route exact path="/" component={ProductIndexContainer}/>
+        <Route path="/products/new" component={CreateProductFormContainer} />
+        <Route exact path="/products/:productId" component={ProductShowContainer}/>     
+        <Route path="/products/:productId/edit" component={EditProductFormContainer} />
         <Route component={NotFound} />
       </Switch>
   </div>

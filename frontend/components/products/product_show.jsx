@@ -1,11 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class ProductsShow extends React.Component {
   constructor(props) {
-    super(props); 
+    super(props);
+
+    this.state = this.props.product;
   }
 
-  
+  componentDidMount() {
+    this.props.requestProduct(this.props.match.params.productId);
+  }
 
   renderErrors() {
     return (
@@ -18,11 +23,16 @@ class ProductsShow extends React.Component {
   }
 
   render() {
-
     return (
-      <div >
-    <div className="divideBar"></div>  
-      <div className="recentImages"></div>
+      <div>
+        <div className="divideBar"></div>
+        <div className="recentImages">
+          <div>
+            <p>{this.state.description}</p>
+            <p>{this.state.date}</p>
+            <Link to="/">Home</Link>
+          </div>
+        </div>
       </div>
     );
   }
