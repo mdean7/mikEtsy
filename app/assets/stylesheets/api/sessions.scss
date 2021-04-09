@@ -193,9 +193,9 @@ background-image: asset-url('etsyUhOhpage.JPG');
     float: right;
     cursor:pointer;
   }
+
   .modal-background {
-     padding-top: 100px;
-    // padding-bottom: 50px;
+    margin: auto;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -210,11 +210,14 @@ background-image: asset-url('etsyUhOhpage.JPG');
   }
   
   .modal-child {
-    position: relative;
-    top: 20%;
-    left: 50%;
-    z-index: 11;
-    transform: translate(-50%, -50%);
+    border-top: 30px solid transparent;
+    position: absolute;
+     z-index: 11;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
   }
   
   #currentForm{
