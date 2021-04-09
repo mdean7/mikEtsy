@@ -9,4 +9,7 @@
 User.delete_all
 
 User.create!(username:'Demo', email:'Demo@DemoUser.Demo', password:'123456')
-User.create!(username:'Mike', email:'Mike@MikeUser.Mike', password:'123456')
+User.create!(id: 1, username:'Mike', email:'Mike@MikeUser.Mike', password:'123456')
+
+Product.delete_all
+Product.create!(title:'PuppyBasket', description:'a basket for puppies', price:39, user_id:1)

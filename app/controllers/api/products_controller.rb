@@ -2,7 +2,7 @@ class Api::ProductsController < ApplicationController
   before_action :require_logged_in, only: [:create, :update, :destroy]
 
   def index
-    products = Product.all
+    @products = Product.all
   end
 
   def show

@@ -4,9 +4,10 @@ import ProductIndex from './product_index';
 
 
 
-const mstp = (state) =>({
+const mstp = (state) =>{  
+  return{
   products: Object.values(state.products)
-})
+}}
 
 const mdtp = (dispatch) =>({
   requestProducts: () => dispatch(requestProducts()),
