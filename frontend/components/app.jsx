@@ -19,18 +19,26 @@ const App = () => (
     <Modal />
     <header>
     <Link to="/" className="header-link">
-    <h1>mikEtsy</h1>
+    <h1> Sokka </h1>
     </Link>
     <GreetingContainer />
     </header>
+    <div className="divideBar"></div>
       
       <Switch>
         <Route exact path="/" component={ProductIndexContainer}/>
-        <Route path="/products/new" component={CreateProductFormContainer} />
-        <Route exact path="/products/:productId" component={ProductShowContainer}/>     
-        <Route path="/products/:productId/edit" component={EditProductFormContainer} />
+        <AuthRoute path="/products/new" component={CreateProductFormContainer} />
+        <AuthRoute exact path="/products/:productId" component={ProductShowContainer}/>     
+        <AuthRoute path="/products/:productId/edit" component={EditProductFormContainer} />
         <Route component={NotFound} />
       </Switch>
+      <footer>
+        <div className="botDivLine" />
+        <div className="bottomBarTop">          
+        </div>
+        <div className="bottomBarBottom">
+        </div>
+      </footer>
   </div>
 );
 

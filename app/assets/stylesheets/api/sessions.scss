@@ -9,12 +9,13 @@
 
 .error-img{
   background-image: asset-url('etsyUhOhpage.JPG');
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   position: absolute;
   top: 100px;
-  bottom: 0;
+  bottom: -200px;
   width: 100%;
+  z-index: 10;
   
 }
 
@@ -28,6 +29,7 @@
   height: 570px;
   width: 700px;
   margin: 0 auto;
+  z-index: 10;
 }
 
 
@@ -282,5 +284,26 @@
   .divideBar{
     height: 20px;
     width: 100%;
+    display:block;
     border-bottom: solid rgb(197, 197, 197) 2px;
+  }
+
+  .bottomBarTop{
+    margin-top:100px;
+    height: 100px;
+    width: 100%;
+    background-color: #2F466C;
+  
+  }
+
+  .bottomBarBottom{
+    height: 50px;
+    width: 100%;
+    background-color: #232347;
+    bottom: 0;
+  }
+
+  .botDivLine{
+    height:10px;
+    width: 100%;
   }

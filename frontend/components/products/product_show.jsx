@@ -25,7 +25,7 @@ class ProductsShow extends React.Component {
   render() {
     return (
       <div>
-        <div className="divideBar"></div>
+        {/* <div className="divideBar"></div> */}
         <div className="recentImages">
           <div>
             <p>{this.state.description}</p>

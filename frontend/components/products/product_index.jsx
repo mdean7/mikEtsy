@@ -24,7 +24,7 @@ class ProductIndex extends React.Component {
     // console.log(this.props)
     return (
       <div>
-        <div className="divideBar"></div>
+        {/* <div className="divideBar"></div> */}
         <div className="colorBar">
           <h1 className="mothersDay">
             Because every mom deserves something as unique as she is.
