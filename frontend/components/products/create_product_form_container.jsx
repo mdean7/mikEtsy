@@ -3,9 +3,10 @@ import { createProduct } from '../../actions/product_actions';
 import ProductForm from './product_form';
 
 
-const mstp = () =>({
-  product: {description:'', date:''},
-  formType: 'Create Product'
+const mstp = (state) =>({
+  product: {description:'', title:'', price:'', user_id: state.session.id},
+  formType: 'Create Product',
+  currentUserId: state.session.id
 })
 
 const mdtp = (dispatch) =>({

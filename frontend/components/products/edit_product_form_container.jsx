@@ -9,12 +9,13 @@ class EditProductForm extends React.Component {
   }
   render () {
 
-    const { product, formType, submitProduct } = this.props;
+    const { currentUserId, product, formType, submitProduct } = this.props;
 
 
     if (!product) return null;
     return (
       <ProductForm
+        currentUserId={currentUserId}
         product={product}
         formType={formType}
         submitProduct={submitProduct} />
@@ -23,12 +24,13 @@ class EditProductForm extends React.Component {
 }
 const mstp = (state, ownProps) =>({
   product: state.products[ownProps.match.params.productId],
-  formType: "Update Product"
+  formType: "Update Product",
+  currentUserId: state.session.id
 })
 
 const mdtp = (dispatch) =>({
   requestProduct: (productId) => dispatch(requestProduct(productId)),
-  submitProduct: (product) => dispatch(updateProduct(product))
+  submitProduct: (product, id) => dispatch(updateProduct(product, id))
 })
 
 export default connect(mstp, mdtp)(EditProductForm)

@@ -11,7 +11,13 @@ class ProductForm extends React.Component {
   
   handleSubmit(e){
     e.preventDefault();
-    this.props.submitProduct(this.state)
+    if( this.props.formType === "Update Product" && this.props.currentUserId === this.state.user_id){
+    this.props.submitProduct(this.state, this.state.id)
+  } else if( this.props.formType !== "Update Product"){
+    this.props.submitProduct(this.state, this.state.id)
+  } else {
+    null;
+  }
   }
   
   update(field){
