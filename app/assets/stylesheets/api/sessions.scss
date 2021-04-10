@@ -8,23 +8,29 @@
 
 
 .error-img{
-background-image: asset-url('etsyUhOhpage.JPG');
+  background-image: asset-url('etsyUhOhpage.JPG');
   background-repeat: no-repeat;
-  margin-top: 90px;
-  height: 1150px;
-  width: 2550px;
+  background-size: cover;
+  // margin-top: 90px;
+  // height: 1150px;
+  // width: 2550px;
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  width: 100%;
   
 }
 
 
 .wut{
   background-image: asset-url('wut.gif'); 
-  position: absolute;
-  top: 400px;
-  left: 730px;
+  position: relative;
+  top: 90px;
+  left: 50px;
+  bottom: 10%;
   height: 570px;
   width: 700px;
-  // z-index: 6;
+  margin: 0 auto;
 }
 
 

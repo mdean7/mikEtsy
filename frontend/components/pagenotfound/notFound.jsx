@@ -1,10 +1,9 @@
 import React from "react";
-
+// import uhOh from "../../../app/assets/images/etsyUhOhpage.JPG"
 class NotFound extends React.Component {
   constructor(props) {
     super(props); 
   }
-
   
 
   renderErrors() {
@@ -21,7 +20,9 @@ class NotFound extends React.Component {
 
     return (
       <div>
-        <div className='error-img'></div>
+        <div className='error-img'>
+        {/* <img src={uhOh} alt="uhOh"/> */}
+        </div>
         <div className="wut"></div>
       </div>
     );
