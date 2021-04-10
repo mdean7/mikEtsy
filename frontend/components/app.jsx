@@ -6,7 +6,7 @@ import GreetingContainer from "./greeting/greeting_container";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import ProductIndexContainer from "./products/product_index_container";
 import ProductShowContainer from "./products/product_show_container";
-import NotFound from "./pagenotfound/notFound";
+import NotFound from "./pagenotfound/not_found";
 import EditProductFormContainer from "./products/edit_product_form_container";
 import CreateProductFormContainer from "./products/create_product_form_container";
 
