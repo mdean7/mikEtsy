@@ -27,9 +27,9 @@ class ProductIndex extends React.Component {
         {/* <div className="divideBar"></div> */}
         <div className="colorBar">
           <h1 className="mothersDay">
-            Because every mom deserves something as unique as she is.
+            Because hand my stuff is cooler even when it looks like trash.
           </h1>
-          <h2 className="shopMothers">Shop Mother’s Day</h2>
+          <h2 className="shopMothers">So buy some weird stuff today!</h2>
         </div>
         <p className="recentImages"></p>
         <ul>

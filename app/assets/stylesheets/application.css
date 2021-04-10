@@ -16,19 +16,17 @@
 
 html {
   margin: 0;
-  margin-top: 10px;
   padding: 0;
 }  
 
 body {
   font-family: 'Guardian-EgypTT', serif;
-  
+  margin: 0;
 }
 
 
 header {
   margin: 0%;
-  /* border-bottom: solid grey 1px; */
   display: flex;
   justify-content: space-around;
   background-color: white;

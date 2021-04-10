@@ -2,12 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
-
-
-
-
 .notFoundContainer{
   display: flex;
 height: max-content;
@@ -68,7 +62,7 @@ width: max-content;
     border-radius: 5px; 
     color: -internal-light-dark(black, white);
     transition: border 200ms ease-out,background 200ms ease-out;
-     box-shadow: 0 1px 4px 0 rgba(37, 37, 37, 0.1) inset; 
+    box-shadow: 0 1px 4px 0 rgba(37, 37, 37, 0.274) inset; 
     border-color: rgba(34, 34, 34, 0.15);
     border-style: solid;
     border-width: 1px;
@@ -82,9 +76,16 @@ width: max-content;
     padding-left: 12px;
     padding-right: 12px; 
    background-color: rgb(232, 240, 254);
-   width: 84%;
-  
+   width: 84%; 
+   &:hover{
+    box-shadow: 0 1px 4px 0 rgba(37, 37, 37, 0.431) inset; 
+    border-color: rgba(0, 0, 0, 0.883);
+    border-style: solid;
+    border-width: 1px;
+   } 
   }
+
+
   
   
   .login-form-box {
@@ -285,8 +286,6 @@ width: max-content;
   }
 
   footer{
-    // position:fixed;
- 
     z-index: 100;
     left:0;
     bottom:0;
@@ -317,8 +316,10 @@ width: max-content;
     bottom: 0;
   }
 
-  .botDivLine{
-    display: flex;
-    height:10px;
-    width: 100%;
+  .botDivLine{ 
+    background-image: asset-url('bottomBarTop.JPG');
+    background-position: bottom left;
+    bottom: -5%;
+    height:50px;
+    width: 3000px;
   }
