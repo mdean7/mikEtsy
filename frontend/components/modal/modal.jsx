@@ -22,6 +22,9 @@ function Modal({modal, closeModal}) {
   return (
     <div className="modal-background" onClick={closeModal}>
       <div className="modal-child" onClick={e => e.stopPropagation()}>
+      <div className="modal-close-container" >
+        <div className="modal-close" onClick={closeModal}>x</div>        
+        </div>
         { component }
       </div>
     </div>
