@@ -9,7 +9,7 @@ import ProductShowContainer from "./products/product_show_container";
 import NotFound from "./pagenotfound/not_found";
 import EditProductFormContainer from "./products/edit_product_form_container";
 import CreateProductFormContainer from "./products/create_product_form_container";
-
+import UserShowContainer from "./user/user_show_container"
 const App = () => (
   <div>
     <Modal />
@@ -26,16 +26,10 @@ const App = () => (
     {/* Main Content */}
     <div className="containerMain">
       <Switch>
-        <Route path="/products/new" component={CreateProductFormContainer} />
-        <Route
-          exact
-          path="/products/:productId"
-          component={ProductShowContainer}
-        />
-        <Route
-          path="/products/:productId/edit"
-          component={EditProductFormContainer}
-        />
+        <Route exact path="/products/new" component={CreateProductFormContainer} />
+        <Route exact path="/products/:productId" component={ProductShowContainer} />
+        <Route exact path="/products/:productId/edit" component={EditProductFormContainer} />
+        <Route exact path="/user/show" component={UserShowContainer} />
         <Route exact path="/" component={ProductIndexContainer} />
         <Route component={NotFound} />
       </Switch>
