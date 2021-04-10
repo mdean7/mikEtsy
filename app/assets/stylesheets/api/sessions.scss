@@ -7,30 +7,33 @@
 
 
 
+
+.notFoundContainer{
+  display: flex;
+height: max-content;
+width: max-content;
+}
+
 .error-img{
   background-image: asset-url('etsyUhOhpage.JPG');
   background-repeat: repeat;
-  background-size: cover;
-  position: absolute;
-  top: 100px;
-  bottom: -200px;
-  width: 100%;
-  z-index: 10;
-  
+  height: 1000px;
+  width: 3064px;  
 }
-
 
 .wut{
   background-image: asset-url('wut.gif'); 
-  position: relative;
-  top: 90px;
-  left: 50px;
-  bottom: 10%;
-  height: 570px;
+  position: absolute;
+  top: 220px;
+  right: -5%;
+  left: 0;
+  height: 550px;
   width: 700px;
   margin: 0 auto;
-  z-index: 10;
+  z-index: 1;
 }
+
+
 
 
 .demoLogin:hover{ 
@@ -280,8 +283,17 @@
   #currentForm{
     font-size: 20px;
   }
+
+  footer{
+    // position:fixed;
+ 
+    z-index: 100;
+    left:0;
+    bottom:0;
+  }
   
   .divideBar{
+    display: flex;
     height: 20px;
     width: 100%;
     display:block;
@@ -289,7 +301,8 @@
   }
 
   .bottomBarTop{
-    margin-top:100px;
+    display: flex;
+    // margin-top:100px;
     height: 100px;
     width: 100%;
     background-color: #2F466C;
@@ -297,6 +310,7 @@
   }
 
   .bottomBarBottom{
+    display: flex;
     height: 50px;
     width: 100%;
     background-color: #232347;
@@ -304,6 +318,7 @@
   }
 
   .botDivLine{
+    display: flex;
     height:10px;
     width: 100%;
   }

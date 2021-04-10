@@ -19,7 +19,7 @@ class NotFound extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className="notFoundContainer">
         <div className='error-img'>
         {/* <img src={uhOh} alt="uhOh"/> */}
         </div>
