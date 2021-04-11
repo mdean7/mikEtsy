@@ -10,7 +10,9 @@ const ProductIndexItem = ({ product, deleteProduct, currentUserId }) => {
   return (
     <div>
       <li>
-        <Link to={`/products/${product.id}`}>{product.title}</Link>
+        <Link to={`/products/${product.id}`}>
+        <div className="product-image">IMAGE PLACE HOLDER</div>
+          {product.title}</Link>
         {/* <Link to={`/products/${product.id}/edit`}>Edit</Link> */}
         {/* <button onClick={()=> deleteProduct(product.id)}>Delete</button> */}
         {/* <button onClick={() => restrictedDelete(product)}>Delete</button> */}
