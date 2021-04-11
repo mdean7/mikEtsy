@@ -307,7 +307,7 @@ width: max-content;
 
   .bottomBarBottom{
     display: flex;
-    height: 50px;
+    height: 75px;
     width: 100%;
     background-color: #232347;
     bottom: 0;
@@ -316,8 +316,8 @@ width: max-content;
   .botDivLine{ 
     padding-top: 30px;
     background-image: asset-url('bottomBarTop.JPG');
-    background-position: bottom left;
+    background-position: center;
     bottom: -5%;
     height:50px;
-    width: 3000px;
+    width: 100%;
   }

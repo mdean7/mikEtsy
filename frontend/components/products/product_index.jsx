@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProductIndexItem from "./product_index_item";
+
 class ProductIndex extends React.Component {
   constructor(props) {
     super(props);
@@ -21,7 +22,7 @@ class ProductIndex extends React.Component {
   }
 
   render() {
-    // console.log(this.props)
+  
     return (
       <div>
         {/* <div className="divideBar"></div> */}
@@ -38,10 +39,11 @@ class ProductIndex extends React.Component {
               key={product.id}
               product={product}
               deleteProduct={this.props.deleteProduct}
+              currentUserId={this.props.currentUserId}
             />
           ))}
         </ul>
-        <Link to="/products/new">New Product</Link>
+        
       </div>
     );
   }

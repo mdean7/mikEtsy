@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
-// import Greeting from './greeting';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import { requestProducts, deleteProduct } from '../../actions/product_actions';
 import UserShow from "./user_show"
