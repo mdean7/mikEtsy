@@ -15,10 +15,14 @@ const Greeting = ({ currentUser, logout, openModal, closeModal }) => {
     closeModal();
     return(
     <hgroup className="header-group">
-      <button>
-      <Link className="store-button" to="/user/show">Store Manager</Link>
-      </button>
-      {/* <h2 className="header-name">Welcome back, {currentUser.username}!</h2> */}
+      <div className="shop-icon-container">
+        <button>
+        <Link className="shop-button" to="/user/show">
+          <div className="shop-icon"></div>
+        </Link>
+        </button>
+      </div>
+
       <Link to="/">
       <button className="header-button" onClick={logout} >Sign out</button>
       </Link>      
