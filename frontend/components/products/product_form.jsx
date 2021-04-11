@@ -23,6 +23,38 @@ class ProductForm extends React.Component {
   update(field){
     return e => this.setState({[field]: e.currentTarget.value})
   }
+
+
+  // Active Stoarage File Reader
+  imagepreview(e){
+  const reader = new FileReader();
+  const file = e.currentTarget.files[0];
+  reader.onloadend = () =>
+    this.setState({ imageUrl: reader.result, imageFile: file });
+  
+  if (file) {
+    reader.readAsDataURL(file);
+  } else {
+    this.setState({ imageUrl: "", imageFile: null });
+  }
+}
+
+handleImageSubmit(e) {
+  e.preventDefault();
+  const formData = new FormData();
+  formData.append('product[title]', this.state.title);
+  if (this.state.photoFile) {
+
+    formData.append('product[photo]', this.state.photoFile);
+  }
+  $.ajax({
+    url: '/api/products',
+    method: 'POST',
+    data: formData,
+    contentType: false,
+    processData: false
+  });
+}
   
     render () {
    
