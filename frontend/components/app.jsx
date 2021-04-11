@@ -19,6 +19,15 @@ const App = () => (
       <Link to="/" className="header-link">
         <h1> Sokka </h1>
       </Link>
+      {/* Search Bar  */}
+      <div className="search-bar-container">
+      <input className="search-bar" type="search" placeholder="Search for anything"/>      
+      <button className="search-bar-button"> 
+      <div className="search-bar-icon"/>
+      </button>
+      
+      </div>
+
       <GreetingContainer />
     </header>
     <div className="divideBar"></div>
