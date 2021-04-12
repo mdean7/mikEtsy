@@ -97,7 +97,7 @@ class ProductForm extends React.Component {
           </label>
 
           <label>
-            Image
+            
             <input
               className="product-form-button"
               type="file"
@@ -105,7 +105,7 @@ class ProductForm extends React.Component {
             />
           </label>
           <div className="image-preview">
-            <h3 className="product-form-labels">Preview</h3>
+            {/* <h3 className="product-form-labels">Preview</h3> */}
             <div className="image-input">{preview}</div>
           </div>
 
