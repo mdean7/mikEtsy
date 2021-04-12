@@ -34,7 +34,6 @@ class ProductForm extends React.Component {
 
   imageFile(e) {
     this.imagePreview(e);
-    // this.handleSubmit(e);
   }
 
   imagePreview(e) {
