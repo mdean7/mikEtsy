@@ -4,7 +4,7 @@ import ProductForm from './product_form';
 
 
 const mstp = (state) =>({
-  product: {description:'', title:'', price:'', user_id: state.session.id},
+  product: {description:'', title:'', price:'', photoFile: null, user_id: state.session.id},
   formType: 'Create Product',
   currentUserId: state.session.id
 })

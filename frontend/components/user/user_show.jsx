@@ -16,7 +16,7 @@ componentDidMount(){
         let filtered = []
         for(let i = 0; i < this.props.products.length; i++){ 
             let product = this.props.products[i]
-            console.log(product.user_id)
+            
             if (product.user_id === this.props.currentUser.id ){
                 filtered.push(product)
             }

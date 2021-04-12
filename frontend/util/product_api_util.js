@@ -10,19 +10,23 @@ export const fetchProduct = (productId) =>(
   })
 )
 
-export const createProduct = (product) =>(
+export const createProduct = (formData) =>(
   $.ajax({
     url: "/api/products",
     method: "POST",
-    data: {product}
+    data: formData,
+    contentType: false,
+    processData: false
   })
 )
 
-export const updateProduct = (product, id) =>(
+export const updateProduct = (formData, id) =>(
   $.ajax({
     url: `/api/products/${id}`,
     method: "PATCH",
-    data: {product}
+    data: formData,
+    contentType: false,
+    processData: false
   })
 )
 
