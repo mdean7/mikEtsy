@@ -22,10 +22,8 @@ class ProductIndex extends React.Component {
   }
 
   render() {
-  
     return (
       <div>
-    
         <div className="colorBar">
           <h1 className="mothersDay">
             Because hand made stuff is cooler even when it looks like trash.
@@ -43,7 +41,6 @@ class ProductIndex extends React.Component {
             />
           ))}
         </ul>
-        
       </div>
     );
   }

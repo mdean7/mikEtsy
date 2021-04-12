@@ -1,16 +1,14 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { requestProduct, updateProduct } from '../../actions/product_actions';
-import ProductForm from './product_form';
+import React from "react";
+import { connect } from "react-redux";
+import { requestProduct, updateProduct } from "../../actions/product_actions";
+import ProductForm from "./product_form";
 
 class EditProductForm extends React.Component {
-  componentDidMount(){
-    this.props.requestProduct(this.props.match.params.productId)
+  componentDidMount() {
+    this.props.requestProduct(this.props.match.params.productId);
   }
-  render () {
-
+  render() {
     const { currentUserId, product, formType, submitProduct } = this.props;
-
 
     if (!product) return null;
     return (
@@ -18,19 +16,20 @@ class EditProductForm extends React.Component {
         currentUserId={currentUserId}
         product={product}
         formType={formType}
-        submitProduct={submitProduct} />
+        submitProduct={submitProduct}
+      />
     );
   }
 }
-const mstp = (state, ownProps) =>({
+const mstp = (state, ownProps) => ({
   product: state.products[ownProps.match.params.productId],
   formType: "Update Product",
-  currentUserId: state.session.id
-})
+  currentUserId: state.session.id,
+});
 
-const mdtp = (dispatch) =>({
+const mdtp = (dispatch) => ({
   requestProduct: (productId) => dispatch(requestProduct(productId)),
-  submitProduct: (product, id) => dispatch(updateProduct(product, id))
-})
+  submitProduct: (product, id) => dispatch(updateProduct(product, id)),
+});
 
-export default connect(mstp, mdtp)(EditProductForm)
+export default connect(mstp, mdtp)(EditProductForm);

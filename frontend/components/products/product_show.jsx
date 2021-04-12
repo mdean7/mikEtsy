@@ -25,12 +25,15 @@ class ProductsShow extends React.Component {
   render() {
     return (
       <div>
-       <p>{this.state.title}</p>
+        <p>{this.state.title}</p>
         <div className="showImage">
-          <img className="idx-images" src={this.state.photoUrl} alt="" /> 
+          <img className="idx-images" src={this.state.photoUrl} alt="" />
           <div>
             <p>{this.state.description}</p>
-            <p>{"$"}{this.state.price}</p>
+            <p>
+              {"$"}
+              {this.state.price}
+            </p>
             <Link to="/">Back to listings</Link>
           </div>
         </div>

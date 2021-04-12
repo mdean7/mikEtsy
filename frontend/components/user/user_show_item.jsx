@@ -9,17 +9,17 @@ const UserShowItem = ({ product, deleteProduct, currentUserId }) => {
   };
   return (
     <div>
-      <li className='user-product-list-item'>
+      <li className="user-product-list-item">
         <Link to={`/products/${product.id}`}>
-        <img className="idx-images" src={product.photoUrl} alt="" /> 
-          {product.title}</Link>
-        <br/>
+          <img className="idx-images" src={product.photoUrl} alt="" />
+          {product.title}
+        </Link>
+        <br />
         Description: {product.description}
-        <br/>
+        <br />
         Price: {product.price}
-        <br/>
+        <br />
         <Link to={`/products/${product.id}/edit`}>Edit</Link>
-     
         <button onClick={() => restrictedDelete(product)}>Delete</button>
       </li>
     </div>

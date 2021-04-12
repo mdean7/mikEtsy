@@ -7,24 +7,20 @@ class UserShow extends React.Component {
   constructor(props) {
     super(props);
   }
-componentDidMount(){
-    this.props.requestProducts()
-}
+  componentDidMount() {
+    this.props.requestProducts();
+  }
   render() {
-
-    const usersProducts = () =>{
-        let filtered = []
-        for(let i = 0; i < this.props.products.length; i++){ 
-            let product = this.props.products[i]
-            
-            if (product.user_id === this.props.currentUser.id ){
-                filtered.push(product)
-            }
+    const usersProducts = () => {
+      let filtered = [];
+      for (let i = 0; i < this.props.products.length; i++) {
+        let product = this.props.products[i];
+        if (product.user_id === this.props.currentUser.id) {
+          filtered.push(product);
         }
-        return filtered;
-    }
-   
-
+      }
+      return filtered;
+    };
 
     return (
       <div className="store-container">
@@ -35,16 +31,14 @@ componentDidMount(){
         <div className="user-product-list-container">
           <h2>Display user specific products here</h2>
           <ul className="user-product-list-items">
-            {/* make logic inside that only inputs products with matching user_id to currenUserId */}
-           { usersProducts().map((product) => (
-            <UserShowItem
-            key={product.id}
-            product={product}
-            deleteProduct={this.props.deleteProduct}
-            currentUserId={this.props.currentUser.id}
-          />
-          ))}
-        
+            {usersProducts().map((product) => (
+              <UserShowItem
+                key={product.id}
+                product={product}
+                deleteProduct={this.props.deleteProduct}
+                currentUserId={this.props.currentUser.id}
+              />
+            ))}
           </ul>
         </div>
         <Link to="/products/new">New Product</Link>

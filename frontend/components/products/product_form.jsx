@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect } from "react-router-dom"
+import { Redirect } from "react-router-dom";
 
 class ProductForm extends React.Component {
   constructor(props) {
@@ -23,14 +23,13 @@ class ProductForm extends React.Component {
       formData.append("product[price]", this.state.price);
       formData.append("product[user_id]", this.state.user_id);
       this.props.submitProduct(formData, this.props.product.id);
-    } 
+    }
     this.setState({ redirect: "/user/show" });
   }
 
   update(field) {
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
-
 
   imagePreview(e) {
     const reader = new FileReader();
@@ -61,7 +60,7 @@ class ProductForm extends React.Component {
       <img className="preview" src={this.state.photoUrl} />
     ) : null;
     if (this.state.redirect) {
-      return <Redirect to={this.state.redirect} />
+      return <Redirect to={this.state.redirect} />;
     }
     return (
       <div>
@@ -74,7 +73,7 @@ class ProductForm extends React.Component {
               onChange={this.update("title")}
               value={this.state.title}
             />
-            <img className="idx-images" src={this.state.photoUrl} alt="" /> 
+            <img className="idx-images" src={this.state.photoUrl} alt="" />
           </label>
           <label>
             Description
@@ -94,7 +93,6 @@ class ProductForm extends React.Component {
           </label>
 
           <label>
-            
             <input
               className="product-form-button"
               type="file"
