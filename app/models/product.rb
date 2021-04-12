@@ -4,6 +4,7 @@
 #
 #  id          :bigint           not null, primary key
 #  description :text             not null
+#  photoUrl    :string
 #  price       :integer          not null
 #  title       :string           not null
 #  created_at  :datetime         not null

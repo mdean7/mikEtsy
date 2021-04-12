@@ -7,7 +7,7 @@ const ProductIndexItem = ({ product, deleteProduct, currentUserId }) => {
     <div>
       <li>
         <Link to={`/products/${product.id}`}>
-        <div className="product-image">IMAGE PLACE HOLDER</div>
+        <img className="idx-images" src={product.photoUrl} alt="" /> 
           {product.title}</Link>
 
       </li>

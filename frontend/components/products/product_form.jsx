@@ -9,7 +9,6 @@ class ProductForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFile = this.handleFile.bind(this);
     this.imagePreview = this.imagePreview.bind(this);
-    this.imageFile = this.imageFile.bind(this);
   }
 
   handleSubmit(e) {
@@ -32,9 +31,6 @@ class ProductForm extends React.Component {
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 
-  imageFile(e) {
-    this.imagePreview(e);
-  }
 
   imagePreview(e) {
     const reader = new FileReader();
@@ -78,6 +74,7 @@ class ProductForm extends React.Component {
               onChange={this.update("title")}
               value={this.state.title}
             />
+            <img className="idx-images" src={this.state.photoUrl} alt="" /> 
           </label>
           <label>
             Description
@@ -101,13 +98,12 @@ class ProductForm extends React.Component {
             <input
               className="product-form-button"
               type="file"
-              onChange={this.imageFile}
+              onChange={this.imagePreview}
             />
           </label>
-          <div className="image-preview">
-            {/* <h3 className="product-form-labels">Preview</h3> */}
+          {/* <div className="image-preview">
             <div className="image-input">{preview}</div>
-          </div>
+          </div> */}
 
           <input type="submit" />
         </form>

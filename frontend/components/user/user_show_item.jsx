@@ -11,7 +11,7 @@ const UserShowItem = ({ product, deleteProduct, currentUserId }) => {
     <div>
       <li className='user-product-list-item'>
         <Link to={`/products/${product.id}`}>
-        <div className="product-image">IMAGE PLACE HOLDER</div>
+        <img className="idx-images" src={product.photoUrl} alt="" /> 
           {product.title}</Link>
         <br/>
         Description: {product.description}

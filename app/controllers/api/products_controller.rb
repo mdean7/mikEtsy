@@ -18,8 +18,7 @@ class Api::ProductsController < ApplicationController
     end
   end
 
-  def update
-    
+  def update    
     @product = Product.find_by(id: params[:id])
     if @product.update(product_params)
       render :show
@@ -43,7 +42,8 @@ class Api::ProductsController < ApplicationController
       :price,
       :title,
       :user_id,
-      :order_id
+      :order_id,
+      :photo
     )
   end
 

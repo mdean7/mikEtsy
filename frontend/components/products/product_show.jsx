@@ -23,14 +23,16 @@ class ProductsShow extends React.Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <div>
-        {/* <div className="divideBar"></div> */}
-        <div className="recentImages">
+       <p>{this.state.title}</p>
+        <div className="showImage">
+          <img className="idx-images" src={this.state.photoUrl} alt="" /> 
           <div>
             <p>{this.state.description}</p>
-            <p>{this.state.date}</p>
-            <Link to="/">Home</Link>
+            <p>{"$"}{this.state.price}</p>
+            <Link to="/">Back to listings</Link>
           </div>
         </div>
       </div>
