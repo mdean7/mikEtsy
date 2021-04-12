@@ -25,7 +25,7 @@ class ProductIndex extends React.Component {
   
     return (
       <div>
-        {/* <div className="divideBar"></div> */}
+    
         <div className="colorBar">
           <h1 className="mothersDay">
             Because hand made stuff is cooler even when it looks like trash.

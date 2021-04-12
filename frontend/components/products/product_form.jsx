@@ -101,9 +101,6 @@ class ProductForm extends React.Component {
               onChange={this.imagePreview}
             />
           </label>
-          {/* <div className="image-preview">
-            <div className="image-input">{preview}</div>
-          </div> */}
 
           <input type="submit" />
         </form>

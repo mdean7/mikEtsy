@@ -23,7 +23,6 @@ class ProductsShow extends React.Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div>
        <p>{this.state.title}</p>
