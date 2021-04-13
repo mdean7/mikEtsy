@@ -1,4 +1,197 @@
 // Place all the styles related to the api/products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
 
+.user-shop{
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+}
+
+.welcome-name{
+  background: rgb(227, 243, 245);
+  padding: 50px;
+}
+.list-sidebar{
+  padding-top: 20px;
+  border-radius: 3px;
+  background-color: #FFF;
+  border: 1px solid #E1E3DF;
+  border-bottom-color: #CBCCC9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin-right: 90px;
+  padding-right: 10px;
+}
+.listings-sidebar{
+  color: #424242;
+  text-align: center;
+  margin: 0;
+  width: 97px;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+}
+
+.add-listing-button{
+  all: revert;
+  color: whitesmoke;
+  background-color: rgb(12, 12, 12);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, Roboto, "Droid Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  height: 37.9972px;
+  text-size-adjust: 100%;
+  user-select: none;
+  white-space: nowrap;
+  width: 95.9517px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  &:hover{
+    background-color: rgb(42, 42, 42);
+    outline: none;
+    border: yellow;
+  }
+}
+
+.bold-shipping{
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-align: left;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+}
+.free-shipping{
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  font-size: 13px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  display: block;
+  margin: 0;
+  background-color: #D7E6F5;
+  border-radius: 6px;
+  border-color: #0000001a;
+  border: 1px transparent solid;
+  padding: 22px;
+  margin-bottom: 12px;
+  
+}
+
+.user-product-list-container{
+  display: flex;
+  align-content: space-between;
+}
+.user-product-list-container > h2{
+    border-radius: 3px;
+    background-color: #FFF;
+    border: 1px solid #E1E3DF;
+    border-bottom-color: #CBCCC9;
+}
+
+.card{
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #FFF;
+  border: 1px solid #E1E3DF;
+  border-bottom-color: #CBCCC9;
+  margin: 1px;
+}
+.card-body-display-block{
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  position: relative;
+  display: block;
+  text-size-adjust: 100%
+}
+.card-img-wrap{
+   padding: 3px;
+    // background-color:white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: block;
+}
+.idx-images{
+  display: block;
+  vertical-align: top;
+  border-radius: 8px;
+  height: auto;
+  width: 99.99%;
+}
+
+.card-functions{
+  width: 100%;
+  border-top: 1px solid #E1E3DF;
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  --vh: 7.35px;
+  box-sizing: inherit;
+}
+.card-edit{
+  display: inline;
+}
+.card-delete{
+  display: inline;
+}
+
+.user-product-list-items{
+  
+}
+.block-grid{
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-left: 0;
+}
+.block-grid-item{
+  font-size: 14px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 9px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 9px;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+.card-title{
+font-size: 14px;
+font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+}
+.card-price{
+  font-size: 12px;
+}
+.card-meta-row{
+  text-align: left;
+  padding-left: 10px;
+}
+.page-view{
+
+}

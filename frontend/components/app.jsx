@@ -17,7 +17,7 @@ const App = () => (
     {/* Header/Navbar */}
     <header>
       <Link to="/" className="header-link">
-        <h1> Sokka </h1>
+        <h1> baskEtsy </h1>
       </Link>
       {/* Search Bar  */}
       <div className="search-bar-container">

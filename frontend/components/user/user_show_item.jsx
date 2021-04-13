@@ -8,21 +8,43 @@ const UserShowItem = ({ product, deleteProduct, currentUserId }) => {
       : null;
   };
   return (
-    <div>
-      <li className="user-product-list-item">
-        <Link to={`/products/${product.id}`}>
-          <img className="idx-images" src={product.photoUrl} alt="" />
-          {product.title}
-        </Link>
-        <br />
-        Description: {product.description}
-        <br />
-        Price: {product.price}
-        <br />
-        <Link to={`/products/${product.id}/edit`}>Edit</Link>
-        <button onClick={() => restrictedDelete(product)}>Delete</button>
-      </li>
-    </div>
+
+          <div className="block-grid-item">
+            
+            <div className="card">
+              <div className="card-body-display-block">
+              <Link to={`/products/${product.id}`}>
+                <div className="card-img-wrap">
+                  <img className="idx-images" src={product.photoUrl} alt="" />
+                </div>
+                <div className="card-meta-row">
+                  <h2 className="card-title">{product.title}</h2>
+                </div>
+                <div className="card-meta-row">
+                  <div className="card-price">{"$"}{product.price}</div>
+                </div>
+              </Link>
+              </div>
+              <div className="card-meta-row">
+                <div className="card-functions">
+                 <div className="edit-icon-container">
+                  <div className="card-edit">
+                   <button >
+                   <Link className="edit-button tooltip" to={`/products/${product.id}/edit`}>                                           
+                      <div className="edit-icon" ></div> 
+                      <span class="tooltiptext">Manage this listing</span> 
+                     </Link>
+                   </button>
+                      </div>
+
+                  </div>
+                  <div className="card-delete">
+                    <button onClick={() => restrictedDelete(product)}>Delete</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
   );
 };
 
