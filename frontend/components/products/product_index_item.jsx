@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 
 const ProductIndexItem = ({ product, deleteProduct, currentUserId }) => {
   return (
-    <div>
-      <li>
+    <div className="card-item">      
         <Link to={`/products/${product.id}`}>
-          <img className="idx-images" src={product.photoUrl} alt="" />
-          {product.title}
-        </Link>
-      </li>
+          <div className="height-placeholder">
+          <img className="splash-images" src={product.photoUrl} alt="" />
+          </div>
+          <div className="product-info">
+          {'$'}{product.price}          
+          </div>
+        </Link>      
     </div>
   );
 };

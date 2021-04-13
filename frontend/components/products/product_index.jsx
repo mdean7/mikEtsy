@@ -30,8 +30,9 @@ class ProductIndex extends React.Component {
           </h1>
           <h2 className="shopMothers">So buy some weird stuff today!</h2>
         </div>
-        <p className="recentImages"></p>
-        <ul>
+        <div className="item-grid-container">
+          <div className="block-grid-item">
+
           {this.props.products.map((product) => (
             <ProductIndexItem
               key={product.id}
@@ -40,7 +41,10 @@ class ProductIndex extends React.Component {
               currentUserId={this.props.currentUserId}
             />
           ))}
-        </ul>
+          </div>
+        </div>
+        <div className="recentImages">
+        </div>
       </div>
     );
   }
