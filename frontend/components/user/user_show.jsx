@@ -21,7 +21,7 @@ class UserShow extends React.Component {
       }
       return filtered;
     };
-    
+  
     return (
       <div className="store-container">
         <div className="user-shop">{this.props.currentUser.username}'s Shop Manager</div>
@@ -34,9 +34,11 @@ class UserShow extends React.Component {
           </h2>
           <br/>
           <br/>
-          <button className="add-listing-button" onClick={() =><Redirect to="/products/new"/>}>
+          <Link to="/products/new">
+          <button className="add-listing-button" >
             + Add a listing            
           </button>
+          </Link>
           </div>
 
           <div className="page-view">
