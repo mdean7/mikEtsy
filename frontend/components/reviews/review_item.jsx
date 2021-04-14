@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ReviewItem = ({ product, deleteReview, currentUserId, review }) => {
   return (
-    <div className="review-items-container">      
+    <div className="review-item-card">      
         <Link to={`/reviews/${review.id}`}>
           <div className="review-info">
             <div className="rating-container">
