@@ -14,15 +14,19 @@
 *= require_self
 */
 
-html, h1, h2 {
+html {
   margin: 0;
   padding: 0;
   font-family: 'Guardian-EgypTT', serif;
 }  
+h1, h2 {
+  font-family: 'Guardian-EgypTT', serif;
+}
 
 body {
   font-family:"Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
   margin: 0;
+  color: rgb(22, 22, 22);
 }
 
 

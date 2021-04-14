@@ -44,11 +44,11 @@ transition: all 0.3s ease-in-out;
   opacity: 0;
   border-radius: 3px;
   box-shadow: 0 15px 15px #0000004d;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 &:hover{
-  transform: scale(1.1, 1.1);
+  transform: scale(1.04, 1.04);
 }
 
 &:hover::after {

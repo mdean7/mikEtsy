@@ -68,38 +68,39 @@ class ProductForm extends React.Component {
 
         <form onSubmit={this.handleSubmit}>
 
-          <div className="photo-input">
-            <label> Photos
+          <div className="photo-input">            
+              <div className="photo-label">Photos</div>
+              <div className="photo-but-container">
               <input
-                className="product-form-button"
+                className="photo-select-but"
                 type="file"
                 onChange={this.imagePreview}
-              />
-            </label>
+                />            
+                <img className="preview-image" src={this.state.photoUrl} alt="" />
+              </div>
           </div>
 
           <div className="listing-details">
           <div className="listing-details-text">Listing details</div> 
-            <label>
+            <div>
             <div className="listing-details-title-text">Title</div> 
               <input
                 type="text"
                 onChange={this.update("title")}
                 value={this.state.title}
               />
-              <img className="idx-images" src={this.state.photoUrl} alt="" />
-            </label>
-            <label>
+            </div>
+            <div>
                    Description 
               <textarea
                 onChange={this.update("description")}
                 value={this.state.description}
               />
-            </label>
+            </div>
           </div>
           <div className="inventory-pricing">
           Inventory and pricing
-            <label>
+            <div>
               Price
               <input
                 type="number"
@@ -107,7 +108,7 @@ class ProductForm extends React.Component {
                 onChange={this.update("price")}
                 value={this.state.price}
               />
-            </label>
+            </div>
           </div>
 
           <input type="submit" />
