@@ -25,9 +25,19 @@
 
 .listing-details{
   flex-direction: column;
+  flex-wrap: wrap;
 }
-
-.photo-label, .listing-details-text{
+.ld-pairs{
+  display: flex;
+  justify-content: space-between;
+  
+}
+.ld-pairs > *{
+  margin: 10px;
+  width: 50%;
+  padding: 0;
+}
+.photo-label, .listing-details-text, .inv-price-text{
   font-weight: 500;
   font-size: 18px;
 }
@@ -68,4 +78,9 @@
   max-height: 146px;
   max-width: 146px;
   margin:  auto;
+}
+
+
+.listing-details-title-text-area{
+  
 }

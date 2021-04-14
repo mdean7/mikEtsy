@@ -82,16 +82,20 @@ class ProductForm extends React.Component {
 
           <div className="listing-details">
           <div className="listing-details-text">Listing details</div> 
-            <div>
-            <div className="listing-details-title-text">Title</div> 
+            <div className="ld-pairs">
+            <div className="listing-details-title-text-area">
+              <div className="listing-details-title-text">Title</div> 
+            <br/>
+            Include keywords that buyers would use to search for your item.
+            </div> 
               <input
                 type="text"
                 onChange={this.update("title")}
                 value={this.state.title}
               />
             </div>
-            <div>
-                   Description 
+            <div className="ld-pairs">
+                  <div className="description-text">Description</div>  
               <textarea
                 onChange={this.update("description")}
                 value={this.state.description}
@@ -99,7 +103,7 @@ class ProductForm extends React.Component {
             </div>
           </div>
           <div className="inventory-pricing">
-          Inventory and pricing
+          <div className="inv-price-text">Inventory and pricing</div>   
             <div>
               Price
               <input
