@@ -8,8 +8,11 @@
 
 User.delete_all
 
-User.create!(username:'Demo', email:'Demo@DemoUser.Demo', password:'123456')
+User.create!(id: 2, username:'Demo', email:'Demo@DemoUser.Demo', password:'123456')
 User.create!(id: 1, username:'Mike', email:'Mike@MikeUser.Mike', password:'123456')
 
 Product.delete_all
-Product.create!(title:'PuppyBasket', description:'a basket for puppies', price:39, user_id:1)
+Product.create!(id:1, title:'PuppyBasket', description:'a basket for puppies', price:39, user_id:2)
+
+Review.delete_all
+Review.create(title:'PuppyBasket', body:'best puppy basket ever!', rating: 5, user_id:2, product_id:1)

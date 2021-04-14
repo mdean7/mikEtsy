@@ -32,7 +32,7 @@ const UserShowItem = ({ product, deleteProduct, currentUserId }) => {
                    <button >
                    <Link className="edit-button tooltip" to={`/products/${product.id}/edit`}>                                           
                       <div className="edit-icon" ></div> 
-                      <span class="tooltiptext">Manage this listing</span> 
+                      <span className="tooltiptext">Manage this listing</span> 
                      </Link>
                    </button>
                       </div>
