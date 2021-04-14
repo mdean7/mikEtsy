@@ -26,9 +26,9 @@ class ProductIndex extends React.Component {
       <div>
         <div className="colorBar">
           <h1 className="mothersDay">
-            Because hand made stuff is cooler even when it looks like trash.
+            Because everything is just better in a basket.
           </h1>
-          <h2 className="shopMothers">So buy some weird stuff today!</h2>
+          <h2 className="shopMothers">So buy a weird basket full of stuff today!</h2>
         </div>
         <div className="item-grid-container">
           <div className="block-grid-item">
