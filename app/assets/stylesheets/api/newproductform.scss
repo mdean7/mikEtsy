@@ -124,8 +124,14 @@
     min-width: 0;
 }
 
-.publish-button{
+.publish-button {
   color: #FFF;
   background: rgb(22, 22, 22);
   border-radius: 4px;
+  
+ 
+
+  &:hover{
+    background-color: rgb(41, 41, 41);
+  }
 }
