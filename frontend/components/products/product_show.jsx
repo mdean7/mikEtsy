@@ -24,19 +24,22 @@ class ProductsShow extends React.Component {
 
   render() {
     return (
-      <div>
-        <p>{this.state.title}</p>
-        <div className="showImage">
-          <img className="idx-images" src={this.state.photoUrl} alt="" />
-          <div>
-            <p>{this.state.description}</p>
-            <p>
+      <div className='product-show-container'>
+        <div className="show-image-wrap">
+          <img className="show-images" src={this.state.photoUrl} alt="" />
+        </div>
+          <div className='show-info'>
+           <div className='show-title'>{this.state.title}</div>
+            <div className='show-price'>
               {"$"}
               {this.state.price}
-            </p>
-            <Link to="/">Back to listings</Link>
+            </div>
+           <button className="show-cart-button">Add to cart</button>
+           <br/>
+           Details
+            <div className='show-description'>{this.state.description}</div>
           </div>
-        </div>
+            
       </div>
     );
   }

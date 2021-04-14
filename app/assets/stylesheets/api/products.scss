@@ -132,6 +132,9 @@ a, a:hover, a:focus, a:active {
   border-radius: 8px;
   height: auto;
   width: 99.99%;
+  &:hover{
+    filter: brightness(90%);
+  }
 }
 
 .card-functions{

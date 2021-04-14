@@ -23,7 +23,7 @@ class EditProductForm extends React.Component {
 }
 const mstp = (state, ownProps) => ({
   product: state.products[ownProps.match.params.productId],
-  formType: "Update Product",
+  formType: "Update this listing",
   currentUserId: state.session.id,
 });
 

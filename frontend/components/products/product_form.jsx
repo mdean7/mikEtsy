@@ -63,42 +63,52 @@ class ProductForm extends React.Component {
       return <Redirect to={this.state.redirect} />;
     }
     return (
-      <div>
-        <h1>{this.props.formType}</h1>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Title
-            <input
-              type="text"
-              onChange={this.update("title")}
-              value={this.state.title}
-            />
-            <img className="idx-images" src={this.state.photoUrl} alt="" />
-          </label>
-          <label>
-            Description
-            <textarea
-              onChange={this.update("description")}
-              value={this.state.description}
-            />
-          </label>
-          <label>
-            Price
-            <input
-              type="number"
-              min="0"
-              onChange={this.update("price")}
-              value={this.state.price}
-            />
-          </label>
+      <div className="product-form-container">
+        <div className="form-title">{(this.props.formType === 'Add a new listing') ? this.props.formType : this.state.title}</div>
 
-          <label>
-            <input
-              className="product-form-button"
-              type="file"
-              onChange={this.imagePreview}
-            />
-          </label>
+        <form onSubmit={this.handleSubmit}>
+
+          <div className="photo-input">
+            <label> Photos
+              <input
+                className="product-form-button"
+                type="file"
+                onChange={this.imagePreview}
+              />
+            </label>
+          </div>
+
+          <div className="listing-details">
+          <div className="listing-details-text">Listing details</div> 
+            <label>
+            <div className="listing-details-title-text">Title</div> 
+              <input
+                type="text"
+                onChange={this.update("title")}
+                value={this.state.title}
+              />
+              <img className="idx-images" src={this.state.photoUrl} alt="" />
+            </label>
+            <label>
+                   Description 
+              <textarea
+                onChange={this.update("description")}
+                value={this.state.description}
+              />
+            </label>
+          </div>
+          <div className="inventory-pricing">
+          Inventory and pricing
+            <label>
+              Price
+              <input
+                type="number"
+                min="0"
+                onChange={this.update("price")}
+                value={this.state.price}
+              />
+            </label>
+          </div>
 
           <input type="submit" />
         </form>

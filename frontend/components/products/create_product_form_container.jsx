@@ -10,7 +10,7 @@ const mstp = (state) => ({
     photoFile: null,
     user_id: state.session.id,
   },
-  formType: "Create Product",
+  formType: "Add a new listing",
   currentUserId: state.session.id,
 });
 
