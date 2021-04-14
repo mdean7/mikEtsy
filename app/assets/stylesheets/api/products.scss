@@ -109,6 +109,8 @@ a, a:hover, a:focus, a:active {
   border: 1px solid #E1E3DF;
   border-bottom-color: #CBCCC9;
   margin: 1px;
+  width: 250px; 
+  height: 300px;
 }
 .card-body-display-block{
   border-top-right-radius: 2px;
@@ -124,14 +126,18 @@ a, a:hover, a:focus, a:active {
     left: 0;
     right: 0;
     top: 0;
-    display: block;
+    display: flex;
+    justify-content: center;
 }
 .idx-images{
   display: block;
   vertical-align: top;
   border-radius: 8px;
+  max-height: 177px;
   height: auto;
-  width: 99.99%;
+  max-width: 250px;
+  max-width: 99%;
+  margin-left: 0.5%;
   &:hover{
     filter: brightness(90%);
   }
@@ -182,6 +188,8 @@ a, a:hover, a:focus, a:active {
   padding-top: 9px;
   text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+  height:296px;
+  width:311px;
 }
 
 .card-title{

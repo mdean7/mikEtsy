@@ -10,17 +10,19 @@ width: 100%;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
+
 }
 //individual items
 .card-item{
-position: relative;
-width: 17%;
+// position: relative;
+width: 215px;
+height: 196px;
 margin: 10px;
 
 }
 //image and its height holder
 .height-placeholder{
-height: auto;
+height: 197px;
 width: auto;
 
 }
