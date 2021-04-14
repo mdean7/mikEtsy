@@ -49,7 +49,9 @@ const App = () => (
     <footer>
       <div className="botDivLine" />
       <div className="bottomBarTop" />
-      <div className="bottomBarBottom" />
+      <div className="bottomBarBottom">
+        <i className="fab fa-github git-icon"></i>
+      </div>
     </footer>
   </div>
 );
