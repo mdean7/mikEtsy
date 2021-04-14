@@ -20,6 +20,10 @@ class User < ApplicationRecord
   has_many :products,
   foreign_key: :user_id,
   class_name: :Product
+
+  has_many :reviews,
+    foreign_key: :user_id,
+    class_name: :Review
   
   validates :username, :password_digest, :session_token, :email, presence: true
   validates :username, :email, :session_token, uniqueness: true
