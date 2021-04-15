@@ -42,15 +42,17 @@
  width: 100%;
  background-color: black;
  color: white;
- &:hover {
-  background-color: #272727;
-  /*  Making button bigger on hover  */
-  transition: .1s ease-in-out;
-  transform: scale(1.02) perspective(1px);
-}
+  &:hover {
+    background-color: #272727;
+    /*  Making button bigger on hover  */
+    transition: .1s ease-in-out;
+    transform: scale(1.02) perspective(1px);
+  }
 }
 
-
+.show-details{
+  font-weight: bold;
+}
 .show-description {
 font-size: 16px;
 }

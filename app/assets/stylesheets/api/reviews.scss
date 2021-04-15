@@ -3,10 +3,26 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .review-items-container{
-  
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 18%;
+  margin-right: 18%;
+  min-height: 500px;
+  max-width: 1200px;
 }
+
+.review-title {
+  font-size: 26px;
+  font-family: 'Guardian-EgypTT', serif;
+  margin-bottom: 10px;
+
+}
+
 .review-item-card{
-  
+  padding: 10px;
+  padding-left: 20px;
 }
 
 .review-info{

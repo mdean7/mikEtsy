@@ -7,7 +7,7 @@ class ProductsShow extends React.Component {
     super(props);
 
     this.state = this.props.product;
-    console.log(this.props.product)
+    console.log(this.props.product);
   }
 
   componentDidMount() {
@@ -55,13 +55,16 @@ class ProductsShow extends React.Component {
             </div>
             <button className="show-cart-button">Add to cart</button>
             <br />
-            Details
+            <div className="show-details">Details</div>
             <div className="show-description">
               {this.props.product.description}
             </div>
           </div>
         </div>
         <div className="review-items-container">
+          <div className="review-title">
+            {productReviews().length} shop reviews
+          </div>
           <div className="all-reviews">
             {productReviews().map((review) => (
               <ReviewItem
