@@ -11,6 +11,8 @@
   text-size-adjust: 100%;
   width: 948.15px;
   -webkit-font-smoothing: antialiased;
+  &:hover > *{
+    opacity: 100%;}
 }
 .search-bar{
   border: 1px solid rgba(34, 34, 34, 0.15);
@@ -39,6 +41,7 @@
   margin: 0px;
   margin-left: 10px;
   background-color: #efefef;
+ 
 }
 
 .search-bar-button{
@@ -105,4 +108,32 @@
   background-repeat: no-repeat;
   height: 24px; 
   width: 24px;
+}
+
+.floating-list{
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  width: 877px; 
+  border-radius: 12px;
+  border: 1px rgba(34, 34, 34, 0.15) solid;
+  box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
+  position: relative;
+  position: absolute;
+  padding-left: 30px;
+  transform-origin: top left;
+  text-align: left;
+  margin: 0;
+  opacity: .1%;
+  margin-top: 58px;
+  list-style-type: none;
+  z-index: 999;
+
+}
+
+.floating-list > li {
+ padding: 2px;
+ 
+  
+    
 }

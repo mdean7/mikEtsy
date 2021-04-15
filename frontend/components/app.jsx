@@ -12,6 +12,9 @@ import CreateProductFormContainer from "./products/create_product_form_container
 import UserShowContainer from "./user/user_show_container"
 import EditReviewFormContainer from "./reviews/edit_review_form_container";
 import CreateReviewFormContainer from "./reviews/create_review_form_container";
+import AutoSearchContainer from "./search/auto_search_container"
+
+
 
 
 
@@ -24,15 +27,9 @@ const App = () => (
       <Link to="/" className="header-link">
         <h1> baskEtsy </h1>
       </Link>
-      {/* Search Bar  */}
-      <div className="search-bar-container">
-      <input className="search-bar" type="search" placeholder="Search for anything"/>      
-      <button className="search-bar-button"> 
-      <div className="search-bar-icon"/>
-      </button>
+      {/* Search Bar  */}    
+      <AutoSearchContainer/>
       
-      </div>
-
       <GreetingContainer />
     </header>
     <div className="divideBar"></div>
