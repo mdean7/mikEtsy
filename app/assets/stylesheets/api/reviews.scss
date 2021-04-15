@@ -64,3 +64,9 @@
 .body-inner2{
 
 }
+.review-pair{
+  display: flex;
+  justify-content: flex-start;
+  // border: solid black 1px;
+  max-width: 500px;
+}

@@ -1,7 +1,8 @@
 import { connect } from "react-redux";
 import { requestProduct } from "../../actions/product_actions";
-import {requestReviews} from "../../actions/review_actions"
+import {requestReviews, deleteReview} from "../../actions/review_actions"
 import ProductShow from "./product_show";
+
 
 const mstp = (state, ownProps) => ({
   product: state.products[ownProps.match.params.productId],

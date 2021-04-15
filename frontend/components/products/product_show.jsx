@@ -54,6 +54,12 @@ class ProductsShow extends React.Component {
               {this.props.product.price}
             </div>
             <button className="show-cart-button">Add to cart</button>
+            <br/>
+            <Link to="/reviews/new">
+              <button>
+              Leave a review
+                </button> 
+              </Link>
             <br />
             <div className="show-details">Details</div>
             <div className="show-description">
@@ -71,7 +77,7 @@ class ProductsShow extends React.Component {
                 key={review.id}
                 review={review}
                 product={this.props.product}
-                deletereview={this.props.deletereview}
+                deleteReview={this.props.deleteReview}
                 currentUserId={this.props.currentUserId}
               />
             ))}

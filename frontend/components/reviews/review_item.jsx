@@ -2,27 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-// const star = (rate) => {
-  
-//   var starHTML =[];
-//   var rate = parseInt(rate);
-//   var increment = 0;
-//   var max = 5; // maximum rating
-
-//   while(increment < rate) {
-//     starHTML.push(<span className="material-icons black"> grade </span>);
-//     increment++;
-//   }
-
-//   while(max > rate) {
-//     starHTML.push(<span className="material-icons white"> star_outline </span>);
-//     max--;
-//   }
-//   return starHTML;
-// };
-
-
-
 const ReviewItem = ({ product, deleteReview, currentUserId, review }) => {
 
   var starHTML =[];
@@ -31,19 +10,19 @@ const ReviewItem = ({ product, deleteReview, currentUserId, review }) => {
   var max = 5; // maximum rating
 
   while(increment < rate) {
-    starHTML.push(<span key={increment} className="material-icons black"> grade </span>);
+    starHTML.push(<span key={increment+Math.random()*100} className="material-icons black"> grade </span>);
     increment++;
   }
 
   while(max > rate) {
-    starHTML.push(<span key={increment} className="material-icons white"> star_outline </span>);
+    starHTML.push(<span key={increment+Math.random()*100} className="material-icons white"> star_outline </span>);
     max--;
   }
 
                   
   return (
     <div className="review-item-card">      
-        <Link to={`/reviews/${review.id}`}>
+        {/* <Link to={`/reviews/${review.id}`}> */}
           <div className="review-info"> 
             <div className="rating-container">
               <div className="rating-stars1">
@@ -65,15 +44,31 @@ const ReviewItem = ({ product, deleteReview, currentUserId, review }) => {
                   {review.body}  
                 </div>
               </div>
-            </div>           
+            </div>   
+            <div className="review-pair">
           {
           ( currentUserId === review.user_id || currentUserId === product.user_id) 
-            ? <button onClick={() =>deleteReview(review.id)}>Remove review</button>
+            ? <button onClick={() => deleteReview(review.id)}>Remove review</button>
             : null
           } 
             
+            {
+          ( currentUserId === review.user_id ) 
+            ? <div className="edit-icon-container">
+            <div className="card-edit">
+             <button >
+             <Link className="edit-button tooltip" to={`/reviews/${review.id}/edit`}>                                           
+                <div className="edit-icon" ></div> 
+                <span className="tooltiptext">Edit my review</span> 
+               </Link>
+             </button>
+            </div>
           </div>
-        </Link>   
+            : null
+          } 
+              </div>        
+          </div>
+          
            
     </div>
   );

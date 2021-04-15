@@ -10,6 +10,11 @@ import NotFound from "./pagenotfound/not_found";
 import EditProductFormContainer from "./products/edit_product_form_container";
 import CreateProductFormContainer from "./products/create_product_form_container";
 import UserShowContainer from "./user/user_show_container"
+import EditReviewFormContainer from "./reviews/edit_review_form_container";
+import CreateReviewFormContainer from "./reviews/create_review_form_container";
+
+
+
 const App = () => (
   <div>
     <Modal />
@@ -39,6 +44,8 @@ const App = () => (
         <Route exact path="/products/:productId" component={ProductShowContainer} />
         <Route exact path="/products/:productId/edit" component={EditProductFormContainer} />
         <AuthRoute  path="/user/show" component={UserShowContainer} />
+        <Route exact path="/reviews/new" component={CreateReviewFormContainer} />
+        <Route exact path="/reviews/:reviewId/edit" component={EditReviewFormContainer} />
         <Route exact path="/" component={ProductIndexContainer} />
         <Route path="/youLostBB???" component={NotFound} />
         <Route  component={NotFound} />
