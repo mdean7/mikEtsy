@@ -4,18 +4,18 @@ import { Link } from "react-router-dom";
 
 const ReviewItem = ({ product, deleteReview, currentUserId, review }) => {
 
-  var starHTML =[];
+  var starPower =[];
   var rate = parseInt(review.rating);
   var increment = 0;
   var max = 5; // maximum rating
 
   while(increment < rate) {
-    starHTML.push(<span key={increment+Math.random()*100} className="material-icons black"> grade </span>);
+    starPower.push(<span key={increment+Math.random()*100} className="material-icons black"> grade </span>);
     increment++;
   }
 
   while(max > rate) {
-    starHTML.push(<span key={increment+Math.random()*100} className="material-icons white"> star_outline </span>);
+    starPower.push(<span key={increment+Math.random()*100} className="material-icons white"> star_outline </span>);
     max--;
   }
 
@@ -27,7 +27,7 @@ const ReviewItem = ({ product, deleteReview, currentUserId, review }) => {
             <div className="rating-container">
               <div className="rating-stars1">
               <div className="rating-stars2">
-                  {starHTML}
+                  {starPower}
                 </div>
               </div>
             </div>

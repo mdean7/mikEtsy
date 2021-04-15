@@ -5,6 +5,7 @@ class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.review;
+    this.state.redirectToReferrer = false;
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -12,6 +13,7 @@ class ReviewForm extends React.Component {
     e.preventDefault();
     if (this.props.currentUserId === this.state.user_id) {
       this.props.submitReview(this.state, this.state.id);
+      this.setState({redirectToReferrer: true})
     }
   }
 
@@ -20,6 +22,12 @@ class ReviewForm extends React.Component {
   }
 
   render() {
+
+    const redirectToReferrer = this.state.redirectToReferrer;
+    if (redirectToReferrer) {
+        return <Redirect to={`/products/${this.state.product_id}`} />
+    }
+
     return (
       <div className="review-form-container">
         <div className="form-title">{this.props.formType}</div>
@@ -38,6 +46,7 @@ class ReviewForm extends React.Component {
                 type="text"
                 onChange={this.update("title")}
                 value={this.state.title}
+                required
               />
             </div>
             <div className="ld-pairs">
@@ -53,6 +62,7 @@ class ReviewForm extends React.Component {
               <textarea
                 onChange={this.update("body")}
                 value={this.state.body}
+                required
               />
             </div>
           </div>
@@ -67,8 +77,10 @@ class ReviewForm extends React.Component {
                 <input
                   type="number"
                   min="0"
+                  max="5"
                   onChange={this.update("rating")}
                   value={this.state.rating}
+                  required
                 />
               </div>
             </div>
