@@ -1,22 +1,26 @@
 import React from 'react';
-import {Link} from "react-router-dom"
+import {Link, Redirect} from "react-router-dom"
 
 export default class AutoSearch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputVal: ''
+      inputVal: '',
+      redirect:false,
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.selectTitle = this.selectTitle.bind(this);
     this.handleInput = this.handleInput.bind(this);
-    
   }
 
   componentDidMount(){
     this.props.requestProducts();
   }
 
-
+  handleSubmit(event) {
+    event.preventDefault()
+    this.setState({redirect: true});
+  }
 
   handleInput(event) {
     this.setState({inputVal: event.currentTarget.value});
@@ -50,9 +54,14 @@ export default class AutoSearch extends React.Component {
   }
 
   render() {
+    if(this.state.redirect && this.matches().length){
+      return(
+        <Redirect to={`/products/${this.matches()[0][1]}`}/>
+      )
+    }
+    // console.log(this.matches().length ? this.matches()[0][1]: null)
     const results = this.matches().map((result, i) => {
       if (i <= 5) {
-        console.log(result)
       return (
         <Link key={i} to={`/products/${result[1]}`}>
           <li key={i} onClick={this.selectTitle}>{result[0]}</li>
@@ -71,13 +80,11 @@ export default class AutoSearch extends React.Component {
       value={this.state.inputVal}
       />     
       
-      <button className="search-bar-button"> 
+      <button className="search-bar-button" onClick={(e)=>this.handleSubmit(e)}> 
       <div className="search-bar-icon"/>
       </button>
-        <ul className="floating-list">
-         {/* <Link to={`/products/${}`}> */}
-         {results}
-         {/* </Link>  */}
+        <ul className="floating-list">       
+          {results}      
         </ul>
       </div>
       </div>
