@@ -55,7 +55,13 @@ class ProductsShow extends React.Component {
             </div>
             <button className="show-cart-button">Add to cart</button>
             <br/>
-            <Link to="/reviews/new">
+            <Link to= {
+              {
+                pathname: "/reviews/new",
+                state: {
+                        product: this.props.product
+                      }
+              }}>
               <button>
               Leave a review
                 </button> 
