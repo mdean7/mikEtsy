@@ -21,7 +21,6 @@ import AutoSearchContainer from "./search/auto_search_container"
 const App = () => (
   <div>
     <Modal />
-
     {/* Header/Navbar */}
     <header>
       <Link to="/" className="header-link">
@@ -40,7 +39,7 @@ const App = () => (
         <Route exact path="/products/new" component={CreateProductFormContainer} />
         <Route exact path="/products/:productId" component={ProductShowContainer} />
         <Route exact path="/products/:productId/edit" component={EditProductFormContainer} />
-        <AuthRoute  path="/user/show" component={UserShowContainer} />
+        <Route  path="/user/show" component={UserShowContainer} />
         <Route exact path="/reviews/new" component={CreateReviewFormContainer} />
         <Route exact path="/reviews/:reviewId/edit" component={EditReviewFormContainer} />
         <Route exact path="/" component={ProductIndexContainer} />

@@ -56,10 +56,17 @@ export default class AutoSearch extends React.Component {
   render() {
     if(this.state.redirect && this.matches().length){
       return(
-        <Redirect to={`/products/${this.matches()[0][1]}`}/>
+        <div>
+          <Redirect to={`/products/${this.matches()[0][1]}`}/> 
+          {this.setState({
+      inputVal: '',
+      redirect:false,
+    })}         
+        </div>
       )
+      
     }
-    // console.log(this.matches().length ? this.matches()[0][1]: null)
+ 
     const results = this.matches().map((result, i) => {
       if (i <= 5) {
       return (
@@ -78,6 +85,7 @@ export default class AutoSearch extends React.Component {
       placeholder="Search for anything"
       onChange={this.handleInput}
       value={this.state.inputVal}
+      onKeyDown={(e) => (e.which == 13 ? this.handleSubmit(e) :null)  }
       />     
       
       <button className="search-bar-button" onClick={(e)=>this.handleSubmit(e)}> 
