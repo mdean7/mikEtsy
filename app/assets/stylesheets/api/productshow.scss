@@ -48,7 +48,35 @@
     transition: .1s ease-in-out;
     transform: scale(1.02) perspective(1px);
   }
+
 }
+.showtooltiptext {
+  visibility: hidden;
+  width: 350px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(139, 139, 139);
+  text-align: center;
+  border: solid 1px black;
+  border-radius: 3px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: -130%;
+  left: 50%;
+  margin-left: 20px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.show-cart-button:hover .showtooltiptext{
+  visibility: visible;
+  opacity: 1;
+}
+
 
 .show-details{
   font-weight: bold;

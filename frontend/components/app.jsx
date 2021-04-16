@@ -52,8 +52,10 @@ const App = () => (
     <footer>
       <div className="botDivLine" />
       <div className="bottomBarTop" />
-      <div className="bottomBarBottom">
-        <i className="fab fa-github git-icon"></i>
+      <div className="bottomBarBottom">      
+      <a href="https://github.com/mdean7/mikEtsy">
+          <i className="fab fa-github git-icon"> </i>
+          </a>
       </div>
     </footer>
   </div>

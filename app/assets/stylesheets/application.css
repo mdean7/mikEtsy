@@ -100,7 +100,7 @@ button {
   color: black;
   background-color: #fdebd2;
   text-align: center;
-
+  overflow: hidden;
 }
 .mothersDay {
   padding-top: 15px;
@@ -114,19 +114,25 @@ button {
 }
 .shopMothers{
   font-weight: bold;
-  padding-bottom: 130px;
+  padding-bottom: 30px;
   background-color: #fdebd2;
   font-size: 15px;
     line-height: 28px;
   font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
   font-weight: 500;
+
 }
 
 .recentImages{
- margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ margin-top: 10px;
+ margin-bottom: 10px;
  background-color: #ddebe3;
- height: 200px;
- 
+ height: 450px;
+ overflow: hidden;
+ align-items: center;
 }
 
 

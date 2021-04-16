@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProductIndexItem from "./product_index_item";
-
+import FeaturedProductIndexItem from "./featured_product_index_item"
 class ProductIndex extends React.Component {
   constructor(props) {
     super(props);
@@ -28,7 +28,27 @@ class ProductIndex extends React.Component {
           <h1 className="mothersDay">
             Because everything is just better in a basket.
           </h1>
+
           <h2 className="shopMothers">So buy a weird basket full of stuff today!</h2>
+            
+          <div className="block-grid-item ">
+
+          {this.props.products.map((product, i) => ( i > 10 && i < 16?
+            <div className="ports">
+
+            <FeaturedProductIndexItem
+            key={product.id}
+            product={product}
+            deleteProduct={this.props.deleteProduct}
+            currentUserId={this.props.currentUserId}
+            />
+            </div>
+
+            : ''
+            ))}
+
+            </div>
+          
         </div>
         <div className="item-grid-container">
           <div className="block-grid-item">
@@ -46,6 +66,25 @@ class ProductIndex extends React.Component {
         </div>
         
         <div className="recentImages">
+          <h1 className="recent-img-text">Recently sold items</h1>
+          <h3>Check out our spring baskets sale!</h3>
+        <div className="block-grid-item ">
+
+{this.props.products.map((product, i) => ( i > 0 && i < 6?
+  <div className="ports">
+
+  <FeaturedProductIndexItem
+  key={product.id}
+  product={product}
+  deleteProduct={this.props.deleteProduct}
+  currentUserId={this.props.currentUserId}
+  />
+  </div>
+
+  : ''
+  ))}
+
+  </div>
         </div>
         <div className="item-grid-container">
         <div className="block-grid-item">

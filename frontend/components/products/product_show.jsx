@@ -7,7 +7,6 @@ class ProductsShow extends React.Component {
     super(props);
 
     this.state = this.props.product;
-    console.log(this.props.product);
   }
 
   componentDidMount() {
@@ -53,7 +52,11 @@ class ProductsShow extends React.Component {
               {"$"}
               {this.props.product.price}
             </div>
-            <button className="show-cart-button">Add to cart</button>
+            
+            <button className="show-cart-button">Add to cart            
+            <span className="showtooltiptext">o( _ _ )o Cart Feature Coming Soon! o( _ _ )o</span> 
+            </button>
+          
             <br/>
             <Link to= {
               {
