@@ -23,7 +23,7 @@ class ProductIndex extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="splash-container">
         <div className="colorBar">
           <h1 className="mothersDay">
             Because everything is just better in a basket.
@@ -33,17 +33,33 @@ class ProductIndex extends React.Component {
         <div className="item-grid-container">
           <div className="block-grid-item">
 
-          {this.props.products.map((product) => (
+          {this.props.products.map((product, i) => ( i <= 10 ?
             <ProductIndexItem
               key={product.id}
               product={product}
               deleteProduct={this.props.deleteProduct}
               currentUserId={this.props.currentUserId}
             />
+            : ''
           ))}
           </div>
         </div>
+        
         <div className="recentImages">
+        </div>
+        <div className="item-grid-container">
+        <div className="block-grid-item">
+
+        {this.props.products.map((product, i) => ( i > 10 ?
+            <ProductIndexItem
+            key={product.id}
+            product={product}
+            deleteProduct={this.props.deleteProduct}
+            currentUserId={this.props.currentUserId}
+            />
+            : ''
+            ))}
+            </div>
         </div>
       </div>
     );
