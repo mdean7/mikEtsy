@@ -5,7 +5,7 @@ export default class AutoSearch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputVal: '',
+      inV: '',
       redirect:false,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,43 +23,39 @@ export default class AutoSearch extends React.Component {
   }
 
   handleInput(event) {
-    this.setState({inputVal: event.currentTarget.value});
+    this.setState({inV: event.currentTarget.value});
   }
 
-  matches() {
-    const matches = [];
-    
-    if (this.state.inputVal.length === 0) {
+  filters() {
+    const results = [];    
+    if (this.state.inV.length === 0) {
       return this.props.titles.sort();
     }
-
     this.props.titles.forEach(title => {
-      const sub = title[0].slice(0, this.state.inputVal.length);
-      if (sub.toLowerCase() === this.state.inputVal.toLowerCase()) {
-        matches.push(title);
-        
+      let section = title[0].slice(0, this.state.inV.length);
+      if (section.toLowerCase() === this.state.inV.toLowerCase()) {
+        results.push(title);        
       }
     });
-
-    if (matches.length === 0) {
-      matches.push('No matches');
+    if (results.length === 0) {
+      results.push('No result...');
     }
 
-    return matches;
+    return results;
   }
 
   selectTitle(event) {
     const title = event.currentTarget.innerText;
-    this.setState({inputVal: title});
+    this.setState({inV: title});
   }
 
   render() {
-    if(this.state.redirect && this.matches().length){
+    if(this.state.redirect && this.filters().length){
       return(
         <div>
-          <Redirect to={`/products/${this.matches()[0][1]}`}/> 
+          <Redirect to={`/products/${this.filters()[0][1]}`}/> 
           {this.setState({
-      inputVal: '',
+      inV: '',
       redirect:false,
     })}         
         </div>
@@ -67,7 +63,7 @@ export default class AutoSearch extends React.Component {
       
     }
  
-    const results = this.matches().map((result, i) => {
+    const results = this.filters().map((result, i) => {
       if (i <= 5) {
       return (
         <Link key={i} to={`/products/${result[1]}`}>
@@ -84,7 +80,7 @@ export default class AutoSearch extends React.Component {
       type="search" 
       placeholder="Search for anything"
       onChange={this.handleInput}
-      value={this.state.inputVal}
+      value={this.state.inV}
       onKeyDown={(e) => (e.which == 13 ? this.handleSubmit(e) :null)  }
       />     
       
