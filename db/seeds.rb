@@ -15,4 +15,4 @@ Product.delete_all
 Product.create!(id:1, title:'PuppyBasket', description:'a basket for puppies', price:39, user_id:2)
 
 Review.delete_all
-Review.create(title:'PuppyBasket', body:'best puppy basket ever!', rating: 5, user_id:2, product_id:1)
+Review.create(id:1, title:'PuppyBasket', body:'best puppy basket ever!', rating: 5, user_id:2, product_id:1)
