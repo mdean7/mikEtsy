@@ -80,7 +80,7 @@ handleSubmit(e) {
   }
 ```
 
-#### Reviews with Star Ratings
+### Reviews with Star Ratings
 All reviews prompt users to rate the product then render the rating as either filled in in hollow stars based on the rating.
 
 ```javascript
