@@ -38,7 +38,7 @@ export default class AutoSearch extends React.Component {
       }
     });
     if (results.length === 0) {
-      results.push('No result...');
+      results.push(['No result...']);
     }
 
     return results;

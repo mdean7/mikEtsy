@@ -22,43 +22,43 @@ mikEtsy is an Etsy clone. It is an ecommerce application that allows users to bu
 
 ## Le Code
 
-#### Autocomplete Search Functionality
+### Autocomplete Search Functionality
 The mikEtsy search function filters users requests in real time and allows them to select these filtered options as links to product pages.
 
 
 #### MapStatetoProps Titles and Ids as a 2d array
 ```javascript
     titles: Object.values(state.products).map(product =>([product.title, product.id])),
-
 ```
 
 #### Filtering Results
 ```javascript
-const results = [];    
+  const results = [];    
     if (this.state.inV.length === 0) {
-      return this.props.titles.sort();
+        return this.props.titles.sort();
     }
+
     this.props.titles.forEach(title => {
       let section = title[0].slice(0, this.state.inV.length);
       if (section.toLowerCase() === this.state.inV.toLowerCase()) {
         results.push(title);        
       }
     });
+
     if (results.length === 0) {
       results.push('No result...');
     }
 
-    return results;
-  }
+  return results;
 ```
 #### Returning the Filtered Title as a Link
 ```javascript
-     <Link key={i} to={`/products/${result[1]}`}>
-          <li key={i} onClick={this.selectTitle}>{result[0]}</li>
-        </Link>
+    <Link key={i} to={`/products/${result[1]}`}>
+      <li key={i} onClick={this.selectTitle}>{result[0]}</li>
+    </Link>
 ```
 
-#### Product Selection and Preview.
+### Product Photo Selection with S3 Image Hosting.
 Users can upload photos of their products and see a preview after selecting their file.
 
 
@@ -78,19 +78,16 @@ handleSubmit(e) {
     }
     this.setState({ redirect: "/user/show" });
   }
-
 ```
 
 #### Reviews with Star Ratings
 All reviews prompt users to rate the product then render the rating as either filled in in hollow stars based on the rating.
 
-
-
 ```javascript
   var starPower =[];
   var rate = parseInt(review.rating);
   var increment = 0;
-  var max = 5; // maximum rating
+  var max = 5; 
 
   while(increment < rate) {
     starPower.push(<span key={increment+Math.random()*100} className="material-icons black"> grade </span>);
@@ -106,7 +103,7 @@ All reviews prompt users to rate the product then render the rating as either fi
 
 ## To-do
 * Add Shopping Cart
-* Add Shopping History Users
+* Add Order History
 
 ## Set up
 * delete gemfile lock
