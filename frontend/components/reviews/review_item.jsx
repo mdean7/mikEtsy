@@ -31,6 +31,7 @@ const ReviewItem = ({ product, deleteReview, currentUserId, review }) => {
                 </div>
               </div>
             </div>
+                {review.user_id}
             <div className="title-container">
               <div className="title-outer1">
               <div className="title-inner2">

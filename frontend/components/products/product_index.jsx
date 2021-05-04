@@ -15,7 +15,7 @@ class ProductIndex extends React.Component {
     return (
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>{error}</li>
+          <li key={`error-${(i+1)*Math.random()*1000}`}>{error}</li>
         ))}
       </ul>
     );
@@ -34,10 +34,10 @@ class ProductIndex extends React.Component {
           <div className="block-grid-item ">
 
           {this.props.products.map((product, i) => ( i > 10 && i < 16?
-            <div className="ports">
+            <div className="ports" key={product.id *(i+1)* Math.random()*1000}>
 
             <FeaturedProductIndexItem
-            key={product.id}
+            key={product.id *(i+1)* Math.random()*1000}
             product={product}
             deleteProduct={this.props.deleteProduct}
             currentUserId={this.props.currentUserId}
@@ -55,7 +55,7 @@ class ProductIndex extends React.Component {
 
           {this.props.products.map((product, i) => ( i <= 10 ?
             <ProductIndexItem
-              key={product.id}
+              key={product.id *(i+1)* Math.random()*1000}
               product={product}
               deleteProduct={this.props.deleteProduct}
               currentUserId={this.props.currentUserId}
@@ -71,10 +71,10 @@ class ProductIndex extends React.Component {
         <div className="block-grid-item ">
 
 {this.props.products.map((product, i) => ( i > 0 && i < 6?
-  <div className="ports">
+  <div className="ports" key={product.id *(i+1)* Math.random()*1000}>
 
   <FeaturedProductIndexItem
-  key={product.id}
+  key={product.id *(i+1)* Math.random()*1000}
   product={product}
   deleteProduct={this.props.deleteProduct}
   currentUserId={this.props.currentUserId}
@@ -91,7 +91,7 @@ class ProductIndex extends React.Component {
 
         {this.props.products.map((product, i) => ( i > 10 ?
             <ProductIndexItem
-            key={product.id}
+            key={product.id *(i+1)* Math.random()*1000}
             product={product}
             deleteProduct={this.props.deleteProduct}
             currentUserId={this.props.currentUserId}
