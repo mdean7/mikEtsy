@@ -5,11 +5,12 @@ import ReviewItem from "../reviews/review_item";
 class ProductsShow extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = this.props.product;
   }
 
+  
   componentDidMount() {
+    this.props.requestUsers();    
     this.props.requestReviews();
     this.props.requestProduct(this.props.match.params.productId);
   }
@@ -88,6 +89,7 @@ class ProductsShow extends React.Component {
                 product={this.props.product}
                 deleteReview={this.props.deleteReview}
                 currentUserId={this.props.currentUserId}
+                username={(this.props.users[review.user_id]).username}                           
               />
             ))}
           </div>

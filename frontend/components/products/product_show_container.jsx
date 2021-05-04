@@ -2,18 +2,20 @@ import { connect } from "react-redux";
 import { requestProduct } from "../../actions/product_actions";
 import {requestReviews, deleteReview} from "../../actions/review_actions"
 import ProductShow from "./product_show";
-
+import {requestUsers} from "../../actions/user_actions"
 
 const mstp = (state, ownProps) => ({
   product: state.products[ownProps.match.params.productId],
   reviews: Object.values(state.reviews),
+  users: Object.values(state.entities.users),
   currentUserId: state.session.id,
 });
 
 const mdtp = (dispatch) => ({
   requestProduct: (productId) => dispatch(requestProduct(productId)),
   requestReviews: () => dispatch(requestReviews()),
-  deleteReview:  (reviewId) => dispatch(deleteReview(reviewId))
+  deleteReview:  (reviewId) => dispatch(deleteReview(reviewId)),
+  requestUsers: () => dispatch(requestUsers()),
 });
 
 export default connect(mstp, mdtp)(ProductShow);
