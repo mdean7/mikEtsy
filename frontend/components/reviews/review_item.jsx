@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-const ReviewItem = ({ product, deleteReview, currentUserId, review,  username}) => {
+const ReviewItem = ({ product, deleteReview, currentUserId, review, username }) => {
 
   var starPower =[];
   var rate = parseInt(review.rating);
