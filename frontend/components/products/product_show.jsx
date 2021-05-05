@@ -36,7 +36,23 @@ class ProductsShow extends React.Component {
       }
       return filtered;
     };
-    if (!this.props.product) return null;
+
+    const reviewNames = () => {
+      let names = [];
+      let reviewIds = productReviews().map(review => (review.user_id) );
+      for (let i = 0; i < reviewIds.length; i++) {
+         for (let j = 0; j < this.props.users.length; j++) {
+            if (this.props.users[j].id === reviewIds[i]){
+              names.push(this.props.users[j].username)
+            }
+         }
+      }
+      return names;
+    }
+
+    if (!this.props.product ) return null;
+    // if (!productReviews().length || !this.props.users || !this.props.product) return null;
+ 
     return (
       <div>
         <div className="product-show-container">
@@ -82,14 +98,14 @@ class ProductsShow extends React.Component {
             {productReviews().length} shop reviews
           </div>
           <div className="all-reviews">
-            {productReviews().map((review) => (
+            {productReviews().map((review, i) => (
               <ReviewItem
                 key={review.id}
                 review={review}
                 product={this.props.product}
                 deleteReview={this.props.deleteReview}
                 currentUserId={this.props.currentUserId}
-                username={(this.props.users[review.user_id]).username}                           
+                username={reviewNames()[i]}                           
               />
             ))}
           </div>
