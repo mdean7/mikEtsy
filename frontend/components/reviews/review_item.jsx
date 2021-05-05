@@ -15,7 +15,7 @@ const ReviewItem = ({ product, deleteReview, currentUserId, review, username }) 
   const newDateString = dateObject
   .toISOString()
   .replace('T', ' ')
-  .slice(0, 16)
+  .slice(0, 10)
 
   var starPower =[];
   var rate = parseInt(review.rating);
@@ -36,7 +36,10 @@ const ReviewItem = ({ product, deleteReview, currentUserId, review, username }) 
   return (
     <div className="review-item-card">      
     
-         <div className="review-date">{username+ ' '+newDateString}</div>
+    <div className="review-date-conatiner">
+         <div className="review-date">{username}</div>
+         <div className="review-date">{newDateString}</div>
+    </div>
                 
           <div className="review-info"> 
             <div className="rating-container">

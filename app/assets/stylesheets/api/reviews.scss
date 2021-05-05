@@ -25,6 +25,19 @@
   padding-left: 20px;
 }
 
+.review-date-conatiner{
+max-width: 20%;
+display: flex;
+justify-content: space-between;
+}
+
+.review-date{
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+
 .review-info{
 
 }
