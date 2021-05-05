@@ -3,10 +3,20 @@ import { Link } from "react-router-dom";
 
 
 const ReviewItem = ({ product, deleteReview, currentUserId, review, username }) => {
-  var year = review.created_at.split('').slice(0,4).join('')
-  var month = review.created_at.split('').slice(5,7).join('')
-  var day = review.created_at.split('').slice(8,10).join('')
-  var timestamp = month + '/' + day + '/'+ year
+  const year = review.created_at.slice(0, 4);
+  const month = review.created_at.slice(5, 7);
+  const day = review.created_at.slice(8, 10);
+  const hour = review.created_at.slice(11, 13);
+  const minute = review.created_at.slice(14, 16);
+  const second = review.created_at.slice(17, 19);
+  const dateObject = new Date(`${year}-${month}-${day}T${hour}:${minute}:${second}`);
+  const currentHours = dateObject.getHours()
+  dateObject.setHours(currentHours - 14)
+  const newDateString = dateObject
+  .toISOString()
+  .replace('T', ' ')
+  .slice(0, 16)
+
   var starPower =[];
   var rate = parseInt(review.rating);
   var increment = 0;
@@ -22,17 +32,18 @@ const ReviewItem = ({ product, deleteReview, currentUserId, review, username }) 
     max--;
   }
 
-            
+          
   return (
     <div className="review-item-card">      
-        {/* <Link to={`/reviews/${review.id}`}> */}
+    
+         <div className="review-date">{username+ ' '+newDateString}</div>
+                
           <div className="review-info"> 
             <div className="rating-container">
               <div className="rating-stars1">
               <div className="rating-stars2">
                   {starPower}
                 </div>
-                {username + ' ' + timestamp}
               </div>
             </div>
             <div className="title-container">
