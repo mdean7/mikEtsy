@@ -51,7 +51,6 @@ class ProductsShow extends React.Component {
     }
 
     if (!this.props.product ) return null;
-    // if (!productReviews().length || !this.props.users || !this.props.product) return null;
  
     return (
       <div>

@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 
 const ReviewItem = ({ product, deleteReview, currentUserId, review, username }) => {
-
+  var year = review.created_at.split('').slice(0,4).join('')
+  var month = review.created_at.split('').slice(5,7).join('')
+  var day = review.created_at.split('').slice(8,10).join('')
+  var timestamp = month + '/' + day + '/'+ year
   var starPower =[];
   var rate = parseInt(review.rating);
   var increment = 0;
@@ -19,7 +22,7 @@ const ReviewItem = ({ product, deleteReview, currentUserId, review, username }) 
     max--;
   }
 
-                  
+            
   return (
     <div className="review-item-card">      
         {/* <Link to={`/reviews/${review.id}`}> */}
@@ -29,7 +32,7 @@ const ReviewItem = ({ product, deleteReview, currentUserId, review, username }) 
               <div className="rating-stars2">
                   {starPower}
                 </div>
-                {username}
+                {username + ' ' + timestamp}
               </div>
             </div>
             <div className="title-container">

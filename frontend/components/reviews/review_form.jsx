@@ -23,6 +23,7 @@ class ReviewForm extends React.Component {
 
   render() {
 
+   
     const redirectToReferrer = this.state.redirectToReferrer;
     if (redirectToReferrer) {
         return <Redirect to={`/products/${this.state.product_id}`} />
