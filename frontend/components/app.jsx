@@ -13,7 +13,7 @@ import UserShowContainer from "./user/user_show_container"
 import EditReviewFormContainer from "./reviews/edit_review_form_container";
 import CreateReviewFormContainer from "./reviews/create_review_form_container";
 import AutoSearchContainer from "./search/auto_search_container"
-
+import ProductNotFound from "./pagenotfound/product_not_found"
 
 
 
@@ -37,6 +37,7 @@ const App = () => (
     <div className="containerMain">
       <Switch>
         <Route exact path="/products/new" component={CreateProductFormContainer} />
+        <Route exact path="/products/undefined" component={ProductNotFound} />
         <Route exact path="/products/:productId" component={ProductShowContainer} />
         <Route exact path="/products/:productId/edit" component={EditProductFormContainer} />
         <Route  path="/user/show" component={UserShowContainer} />

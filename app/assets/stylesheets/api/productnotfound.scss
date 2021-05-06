@@ -1,0 +1,15 @@
+.not-found-text{
+display: flex;
+flex-direction: column;
+height: 100%;
+justify-content: space-evenly;
+padding-left: 200px;
+}
+.big-text{
+  font-size: 50px;
+  font-weight: 700;
+}
+.small-text{
+  font-size: 30px;
+  font-weight: 500;
+}
