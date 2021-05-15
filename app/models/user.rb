@@ -22,8 +22,12 @@ class User < ApplicationRecord
   class_name: :Product
 
   has_many :reviews,
-    foreign_key: :user_id,
-    class_name: :Review
+  foreign_key: :user_id,
+  class_name: :Review
+
+  has_many :orders
+  foreign_key: :user_id,
+  class_name: :Order
   
   validates :username, :password_digest, :session_token, :email, presence: true
   validates :username, :email, :session_token, uniqueness: true
