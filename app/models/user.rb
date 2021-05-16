@@ -25,7 +25,7 @@ class User < ApplicationRecord
   foreign_key: :user_id,
   class_name: :Review
 
-  has_many :orders
+  has_many :orders,
   foreign_key: :user_id,
   class_name: :Order
   

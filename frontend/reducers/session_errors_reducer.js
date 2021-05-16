@@ -8,7 +8,9 @@ export default (state = [], action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_SESSION_ERRORS:
-      return action.errors;
+      if(action.errors)
+      {return action.errors} 
+      else {null};
     case RECEIVE_CURRENT_USER:
       return [];
     case CLEAR_SESSION_ERRORS:
