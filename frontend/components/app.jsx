@@ -30,6 +30,13 @@ const App = () => (
       <AutoSearchContainer/>
       
       <GreetingContainer />
+      <div className="cart-icon-container">
+          <button>
+            <Link className="cart-button" to="/user/show">
+              <div className="cart-icon"></div>
+            </Link>
+          </button>
+        </div>
     </header>
     <div className="divideBar"></div>
 
