@@ -6,6 +6,7 @@ import errors from "./errors_reducer";
 import ui from "./ui_reducer"
 import products from "./products_reducer"
 import reviews from "./reviews_reducer"
+import orders from "./orders_reducer"
 
 const rootReducer = combineReducers({
   entities,
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
   errors,
   ui,
   products,
-  reviews
+  reviews,
+  orders
 });
 
 export default rootReducer;

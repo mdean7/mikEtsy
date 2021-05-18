@@ -14,7 +14,7 @@ import EditReviewFormContainer from "./reviews/edit_review_form_container";
 import CreateReviewFormContainer from "./reviews/create_review_form_container";
 import AutoSearchContainer from "./search/auto_search_container"
 import ProductNotFound from "./pagenotfound/product_not_found"
-
+import OrderFormContainer from "./orders/order_form_container"
 
 
 
@@ -32,7 +32,7 @@ const App = () => (
       <GreetingContainer />
       <div className="cart-icon-container">
           <button>
-            <Link className="cart-button" to="/user/show">
+            <Link className="cart-button" to="/orders/new">
               <div className="cart-icon"></div>
             </Link>
           </button>
@@ -50,6 +50,7 @@ const App = () => (
         <Route  path="/user/show" component={UserShowContainer} />
         <Route exact path="/reviews/new" component={CreateReviewFormContainer} />
         <Route exact path="/reviews/:reviewId/edit" component={EditReviewFormContainer} />
+        <Route exact path="/orders/new" component={OrderFormContainer}/>
         <Route exact path="/" component={ProductIndexContainer} />
         <Route path="/youLostBB???" component={NotFound} />
         <Route  component={NotFound} />

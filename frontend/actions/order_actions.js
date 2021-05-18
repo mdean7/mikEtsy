@@ -34,3 +34,8 @@ export const createOrder = (order) => (dispatch)=> (
   OrderAPIUtil.createOrder(order)
   .then((order) => dispatch(receiveOrder(order)))
 );
+
+export const updateOrder = (order, id) => (dispatch)=> (
+  OrderAPIUtil.updateOrder(order, id)
+  .then((order) => dispatch(receiveOrder(order)))
+);
