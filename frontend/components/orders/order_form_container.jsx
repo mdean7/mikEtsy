@@ -8,6 +8,7 @@ const mapStateToProps = state => {
     // currentOrder: state.orders[ownProps.match.params.orderId],
     orderItems: Object.values(state.orders),
     currentUserId: state.session.id,
+    products: Object.values(state.products),
 })}
 
 const mapDispatchToProps = dispatch => ({

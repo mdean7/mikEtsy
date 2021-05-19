@@ -1,11 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import { createOrder } from "../../actions/order_actions";
 import ReviewItem from "../reviews/review_item";
 
 class ProductsShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.product;
+    this.state = {redirection: false}
+    
+    this.updateTheOrder = this.updateTheOrder.bind(this);
+    this.newOrder = this.newOrder.bind(this);
   }
 
   
@@ -25,7 +29,22 @@ class ProductsShow extends React.Component {
     );
   }
 
+  updateTheOrder(orderId){
+    const formData = new FormData();      
+      formData.append("order[product_id]", this.props.product.id);
+      this.props.updateOrder(formData, orderId); 
+  }
+
+  newOrder(){  
+    this.props.order.user_id = this.props.currentUserId;
+    this.props.order.product_id = this.props.product.id;
+    this.props.order.total = this.props.product.price;
+    this.props.createOrder(this.props.order) 
+    this.setState({redirection: true})
+  }
+
   render() {
+    if(this.state.redirection){return <Redirect to={`../orders/new`}/> }
     const productReviews = () => {
       let filtered = [];
       for (let i = 0; i < this.props.reviews.length; i++) {
@@ -69,9 +88,16 @@ class ProductsShow extends React.Component {
               {this.props.product.price}
             </div>
             
-            <button className="show-cart-button">Add to cart            
-            <span className="showtooltiptext">o( _ _ )o Cart Feature Coming Soon! o( _ _ )o</span> 
-            </button>
+            {this.props.order.id && this.props.currentUserId === this.props.order.user_id 
+            ? this.updateTheOrder(this.props.order.id) 
+            : 
+            <button className="show-cart-button" onClick={()=> this.newOrder()}>Add to cart 
+               {/* <span className="showtooltiptext">o( _ _ )o Cart Feature Coming Soon! o( _ _ )o</span>  */}
+               </button>      
+           
+              }      
+            
+          
           
             <br/>
             <Link to= {
