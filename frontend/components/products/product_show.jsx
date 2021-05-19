@@ -1,20 +1,18 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
-import { createOrder } from "../../actions/order_actions";
 import ReviewItem from "../reviews/review_item";
 
 class ProductsShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {redirection: false}
-    
+    this.state = { redirection: false };
+
     this.updateTheOrder = this.updateTheOrder.bind(this);
     this.newOrder = this.newOrder.bind(this);
   }
 
-  
   componentDidMount() {
-    this.props.requestUsers();    
+    this.props.requestUsers();
     this.props.requestReviews();
     this.props.requestProduct(this.props.match.params.productId);
   }
@@ -29,22 +27,25 @@ class ProductsShow extends React.Component {
     );
   }
 
-  updateTheOrder(orderId){
-    const formData = new FormData();      
-      formData.append("order[product_id]", this.props.product.id);
-      this.props.updateOrder(formData, orderId); 
+  updateTheOrder(orderId) {
+    const formData = new FormData();
+    formData.append("order[product_id]", this.props.product.id);
+    this.props.updateOrder(formData, orderId);
   }
 
-  newOrder(){  
+  newOrder() {
     this.props.order.user_id = this.props.currentUserId;
     this.props.order.product_id = this.props.product.id;
     this.props.order.total = this.props.product.price;
-    this.props.createOrder(this.props.order) 
-    this.setState({redirection: true})
+    this.props.createOrder(this.props.order);
+    this.setState({ redirection: true });
   }
 
   render() {
-    if(this.state.redirection){return <Redirect to={`../orders/new`}/> }
+    if (this.state.redirection) {
+      return <Redirect to={`../orders/new`} />;
+    }
+
     const productReviews = () => {
       let filtered = [];
       for (let i = 0; i < this.props.reviews.length; i++) {
@@ -58,19 +59,19 @@ class ProductsShow extends React.Component {
 
     const reviewNames = () => {
       let names = [];
-      let reviewIds = productReviews().map(review => (review.user_id) );
+      let reviewIds = productReviews().map((review) => review.user_id);
       for (let i = 0; i < reviewIds.length; i++) {
-         for (let j = 0; j < this.props.users.length; j++) {
-            if (this.props.users[j].id === reviewIds[i]){
-              names.push(this.props.users[j].username)
-            }
-         }
+        for (let j = 0; j < this.props.users.length; j++) {
+          if (this.props.users[j].id === reviewIds[i]) {
+            names.push(this.props.users[j].username);
+          }
+        }
       }
       return names;
-    }
+    };
 
-    if (!this.props.product ) return null;
- 
+    if (!this.props.product) return null;
+
     return (
       <div>
         <div className="product-show-container">
@@ -87,30 +88,31 @@ class ProductsShow extends React.Component {
               {"$"}
               {this.props.product.price}
             </div>
-            
-            {this.props.order.id && this.props.currentUserId === this.props.order.user_id 
-            ? this.updateTheOrder(this.props.order.id) 
-            : 
-            <button className="show-cart-button" onClick={()=> this.newOrder()}>Add to cart 
-               {/* <span className="showtooltiptext">o( _ _ )o Cart Feature Coming Soon! o( _ _ )o</span>  */}
-               </button>      
-           
-              }      
-            
-          
-          
-            <br/>
-            <Link to= {
-              {
+
+            {this.props.order.id &&
+            this.props.currentUserId === this.props.order.user_id ? (
+              this.updateTheOrder(this.props.order.id)
+            ) : (
+              <button
+                className="show-cart-button"
+                onClick={() => this.newOrder()}
+              >
+                Add to cart
+                {/* <span className="showtooltiptext">o( _ _ )o Cart Feature Coming Soon! o( _ _ )o</span>  */}
+              </button>
+            )}
+
+            <br />
+            <Link
+              to={{
                 pathname: "/reviews/new",
                 state: {
-                        product: this.props.product
-                      }
-              }}>
-              <button>
-              Leave a review
-                </button> 
-              </Link>
+                  product: this.props.product,
+                },
+              }}
+            >
+              <button>Leave a review</button>
+            </Link>
             <br />
             <div className="show-details">Details</div>
             <div className="show-description">
@@ -130,7 +132,7 @@ class ProductsShow extends React.Component {
                 product={this.props.product}
                 deleteReview={this.props.deleteReview}
                 currentUserId={this.props.currentUserId}
-                username={reviewNames()[i]}                           
+                username={reviewNames()[i]}
               />
             ))}
           </div>

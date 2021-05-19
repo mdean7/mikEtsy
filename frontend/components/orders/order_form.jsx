@@ -13,28 +13,30 @@ class OrderForm extends React.Component {
 render(){
 
   if(!this.props.products){return null}
+  if(!this.props.orderItems){return null}
   let orderProducts = []
   for(let i=0; i < this.props.products.length; i++){  
-    if(this.props.products[i].id === (this.props.orderItems[this.props.orderItems.length - 1]).product_id){
+    if(this.props.orderItems.length > 0 && this.props.products[i].id === (this.props.orderItems[this.props.orderItems.length - 1]).product_id){
       orderProducts.push(this.props.products[i])
     }
   }
   return(
     <div>
-    <div>
-      You have {orderProducts.length} item in your cart
-    </div>
-    {orderProducts.length > 0 
-    ? orderProducts.map( product =>{
-      return(        
+    {orderProducts.length > 0 && this.props.currentUserId
+    ? <div>You have {orderProducts.length} items in your cart
+    {orderProducts.map( product =>{
+      return(               
         <ProductIndexItem
         key={product.id * Math.random()*1000}
         product={product}      
         currentUserId={this.props.currentUserId}
-        />
+        />        
         )
-    })
-    : <div className="empty-cart">Your Cart is Empty</div>
+      })}
+      </div>
+    : this.props.currentUserId
+    ? <div className="empty-cart">Your Cart is Empty</div>
+    : <div className="empty-cart">Please sign in to add items to your cart</div>
     }
     </div>
     )
