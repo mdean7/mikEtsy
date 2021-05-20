@@ -101,8 +101,13 @@ class ProductsShow extends React.Component {
               {"$"}
               {this.props.product.price}
             </div>
-
-              {orderCheck()
+            <button
+                className="show-cart-button"
+                onClick={() => this.newOrder()}
+               >
+                Add to cart          
+              </button>
+              {/* {orderCheck()
               ?<button
               className="show-cart-button"
               onClick={() => this.updateTheOrder(orderCheck())}
@@ -116,7 +121,7 @@ class ProductsShow extends React.Component {
                >
                 Add to cart          
               </button>
-            }
+            } */}
 
             <br />
             <Link

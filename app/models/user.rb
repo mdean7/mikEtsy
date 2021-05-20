@@ -20,15 +20,21 @@ class User < ApplicationRecord
   has_many :products,
   foreign_key: :user_id,
   class_name: :Product
+  
+  has_many :orders,
+  foreign_key: :user_id,
+  class_name: :Order
+  
+  has_many :items_in_cart,
+   through: :orders, 
+   source: :product
 
   has_many :reviews,
   foreign_key: :user_id,
   class_name: :Review
 
-  has_many :orders,
-  foreign_key: :user_id,
-  class_name: :Order
-  
+
+
   validates :username, :password_digest, :session_token, :email, presence: true
   validates :username, :email, :session_token, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true

@@ -1,4 +1,5 @@
 import React from 'react';
+import { removeOrder } from '../../actions/order_actions';
 import ProductIndexItem from '../products/product_index_item';
 
 
@@ -15,22 +16,30 @@ render(){
   if(!this.props.products){return null}
   if(!this.props.orderItems){return null}
   let orderProducts = []
-  for(let i=0; i < this.props.products.length; i++){  
-    if(this.props.orderItems.length > 0 && this.props.products[i].id === (this.props.orderItems[this.props.orderItems.length - 1]).product_id){
-      orderProducts.push(this.props.products[i])
+  for (let j=0; j < this.props.orderItems.length; j++){ 
+   if( this.props.orderItems[j].user_id === this.props.currentUserId){
+  for(let i=0; i < this.props.products.length; i++){    
+    if(this.props.orderItems[j].product_id === this.props.products[i].id){
+      orderProducts.push([this.props.products[i], this.props.orderItems[j].id])
     }
+    }
+  }
   }
   return(
     <div>
     {orderProducts.length > 0 && this.props.currentUserId
     ? <div>You have {orderProducts.length} items in your cart
     {orderProducts.map( product =>{
-      return(               
+     
+      return(  
+        <div key={Math.floor((product[1]+3) * 100000 * Math.random())}>
         <ProductIndexItem
-        key={product.id * Math.random()*1000}
-        product={product}      
-        currentUserId={this.props.currentUserId}
+        key={Math.floor((product[1]+1) * 100000 * Math.random())}
+        product={product[0]}      
+        currentUserId={this.props.currentUserId}     
         />        
+        <button key={Math.floor((product[1]+2) * 100000 * Math.random())} onClick={()=> this.props.removeOrder(product[1])}>Remove from cart</button>
+        </div>                    
         )
       })}
       </div>

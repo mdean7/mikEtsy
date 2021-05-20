@@ -18,11 +18,12 @@ class Order < ApplicationRecord
 
   validates :total, presence: true
 
-  belongs_to :user,
-  foreign_key: :user_id,
-  class_name: :User
+  belongs_to :product,
+    foreign_key: :product_id,
+    class_name: :Product
 
-  has_many :products,
-  foreign_key: :order_id,
-  class_name: :Product
+  belongs_to :buyer,
+    foreign_key: :user_id,
+    class_name: :User
+
 end

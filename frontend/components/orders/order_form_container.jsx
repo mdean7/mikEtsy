@@ -4,8 +4,8 @@ import { requestOrders, createOrder, removeOrder, updateOrder} from '../../actio
 import OrderForm from './order_form';
 
 const mapStateToProps = state => { 
+  
     return ({
-    // currentOrder: state.orders[ownProps.match.params.orderId],
     orderItems: Object.values(state.orders),
     currentUserId: state.session.id,
     products: Object.values(state.products),
