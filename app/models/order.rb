@@ -23,6 +23,6 @@ class Order < ApplicationRecord
   class_name: :User
 
   has_many :products,
-  foreign_key: :product_id,
+  foreign_key: :order_id,
   class_name: :Product
 end

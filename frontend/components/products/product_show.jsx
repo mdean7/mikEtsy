@@ -14,6 +14,7 @@ class ProductsShow extends React.Component {
   componentDidMount() {
     this.props.requestUsers();
     this.props.requestReviews();
+    this.props.requestOrders();
     this.props.requestProduct(this.props.match.params.productId);
   }
 
@@ -27,10 +28,11 @@ class ProductsShow extends React.Component {
     );
   }
 
-  updateTheOrder(orderId) {
-    const formData = new FormData();
-    formData.append("order[product_id]", this.props.product.id);
-    this.props.updateOrder(formData, orderId);
+  updateTheOrder(order) {  
+    console.log(order, order.id)  
+    order.total += this.props.product.price;
+    order.product_id = this.props.product.id;
+    this.props.updateOrder(order, order.id);
   }
 
   newOrder() {
@@ -42,6 +44,7 @@ class ProductsShow extends React.Component {
   }
 
   render() {
+
     if (this.state.redirection) {
       return <Redirect to={`../orders/new`} />;
     }
@@ -71,7 +74,17 @@ class ProductsShow extends React.Component {
     };
 
     if (!this.props.product) return null;
+    if(!this.props.orders) return null;
 
+    const orderCheck = () =>{
+      let currentOrder = []
+      for(let i = 0; i< this.props.orders.length; i++){
+          if(this.props.orders[i].user_id === this.props.currentUserId){
+            currentOrder.unshift(this.props.orders[i])
+          }
+      }
+      if(currentOrder.length >= 1){return currentOrder[0]}
+    }
     return (
       <div>
         <div className="product-show-container">
@@ -89,18 +102,21 @@ class ProductsShow extends React.Component {
               {this.props.product.price}
             </div>
 
-            {this.props.order.id &&
-            this.props.currentUserId === this.props.order.user_id ? (
-              this.updateTheOrder(this.props.order.id)
-            ) : (
-              <button
+              {orderCheck()
+              ?<button
+              className="show-cart-button"
+              onClick={() => this.updateTheOrder(orderCheck())}
+             >
+              Add to cart          
+            </button> 
+              
+             : <button
                 className="show-cart-button"
                 onClick={() => this.newOrder()}
-              >
-                Add to cart
-                {/* <span className="showtooltiptext">o( _ _ )o Cart Feature Coming Soon! o( _ _ )o</span>  */}
+               >
+                Add to cart          
               </button>
-            )}
+            }
 
             <br />
             <Link

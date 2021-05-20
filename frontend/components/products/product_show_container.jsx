@@ -3,7 +3,7 @@ import { requestProduct } from "../../actions/product_actions";
 import {requestReviews, deleteReview} from "../../actions/review_actions"
 import ProductShow from "./product_show";
 import {requestUsers} from "../../actions/user_actions"
-import {createOrder, updateOrder} from "../../actions/order_actions"
+import {createOrder, updateOrder, requestOrders} from "../../actions/order_actions"
 
 const mstp = (state, ownProps) => ({
   product: state.products[ownProps.match.params.productId],
@@ -14,13 +14,14 @@ const mstp = (state, ownProps) => ({
   order: {
     total: '',
     user_id: '',
-    product_id: '',
+    product_id: [],
   },
 });
 
 const mdtp = (dispatch) => ({
+  requestOrders: () => dispatch(requestOrders()),
   createOrder: (order) => dispatch(createOrder(order)),
-  updateOrder: (orderId) => dispatch(updateOrder(orderId)),
+  updateOrder: (order, orderId) => dispatch(updateOrder(order, orderId)),
   requestProduct: (productId) => dispatch(requestProduct(productId)),
   requestReviews: () => dispatch(requestReviews()),
   deleteReview:  (reviewId) => dispatch(deleteReview(reviewId)),

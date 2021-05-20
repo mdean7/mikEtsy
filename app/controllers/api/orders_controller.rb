@@ -41,6 +41,7 @@ class Api::OrdersController < ApplicationController
       :total,      
       :user_id,
       :product_id,
+      :product,
     )
   end
 end

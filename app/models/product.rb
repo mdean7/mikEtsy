@@ -31,7 +31,7 @@ class Product < ApplicationRecord
     foreign_key: :product_id,
     class_name: :Review
 
-    has_many :orders,
-  foreign_key: :product_id,
-  class_name: :Order
+  belongs_to :order,
+    foreign_key: :order_id,
+    class_name: :Order
 end
