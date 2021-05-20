@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link, Redirect } from "react-router-dom";
 import ReviewItem from "../reviews/review_item";
 
@@ -6,7 +6,6 @@ class ProductsShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = { redirection: false };
-
     this.updateTheOrder = this.updateTheOrder.bind(this);
     this.newOrder = this.newOrder.bind(this);
   }
@@ -18,6 +17,7 @@ class ProductsShow extends React.Component {
     this.props.requestProduct(this.props.match.params.productId);
   }
 
+
   renderErrors() {
     return (
       <ul>
@@ -28,19 +28,20 @@ class ProductsShow extends React.Component {
     );
   }
 
-  updateTheOrder(order) {  
-    console.log(order, order.id)  
-    order.total += this.props.product.price;
+  updateTheOrder(order) {       
+    order.total += 1;
     order.product_id = this.props.product.id;
     this.props.updateOrder(order, order.id);
   }
 
   newOrder() {
+    let timer = null;
     this.props.order.user_id = this.props.currentUserId;
     this.props.order.product_id = this.props.product.id;
-    this.props.order.total = this.props.product.price;
-    this.props.createOrder(this.props.order);
-    this.setState({ redirection: true });
+    this.props.order.total = 1;
+    this.props.createOrder(this.props.order)
+    timer = setTimeout(() => this.setState({ redirection: true }), 50)
+
   }
 
   render() {
@@ -74,8 +75,7 @@ class ProductsShow extends React.Component {
     };
 
     if (!this.props.product) return null;
-    if(!this.props.orders) return null;
-
+    if(!this.props.orders) return null;  
     const orderCheck = () =>{
       let currentOrder = []
       for(let i = 0; i< this.props.orders.length; i++){

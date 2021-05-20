@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProductIndexItem = ({ product, deleteProduct, currentUserId }) => {
-
+const ProductIndexItem = ({ product, deleteProduct, currentUserId,}) => {
+ 
   return (
     <div className="card-item">      
         <Link to={`/products/${product.id}`}>
@@ -12,7 +12,8 @@ const ProductIndexItem = ({ product, deleteProduct, currentUserId }) => {
           <div className="product-info">
           {'$'}{product.price}          
           </div>
-        </Link>      
+        </Link> 
+      
     </div>
   );
 };

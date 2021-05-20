@@ -39,3 +39,9 @@ export const updateOrder = (order, id) => (dispatch)=> (
   OrderAPIUtil.updateOrder(order, id)
   .then((order) => dispatch(receiveOrder(order)))
 );
+
+export const deleteOrder = (id) => (dispatch) => {
+  return OrderAPIUtil.deleteOrder(id).then((order) =>
+    dispatch(removeOrder(order))
+  );
+};
