@@ -40,7 +40,7 @@ class ProductsShow extends React.Component {
     this.props.order.product_id = this.props.product.id;
     this.props.order.total = 1;
     this.props.createOrder(this.props.order)
-    timer = setTimeout(() => this.setState({ redirection: true }), 50)
+    timer = setTimeout(() => this.setState({ redirection: true }), 500)
 
   }
 
