@@ -40,7 +40,8 @@ class OrderForm extends React.Component {
       <div>
         {orderProducts.length > 0 && this.props.currentUserId ? (
           <div>
-            {orderProducts.length} {orderProducts.length === 1 ? 'item' : 'items'} in your cart
+            {orderProducts.length}{" "}
+            {orderProducts.length === 1 ? "item" : "items"} in your cart
             {orderProducts.map((product) => {
               return (
                 <div
@@ -57,12 +58,22 @@ class OrderForm extends React.Component {
                     <div className="cart-info">
                       <div>{product[0].title} </div>
                       <div>{product[0].description} </div>
+                      <button onClick={() => this.handleDelete(product[1].id)}>
+                        Remove from cart
+                      </button>
+                    </div>
+                    <div className="product-total">
+                      <select >
+                        <option value={product[1].total}>{product[1].total}</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                      </select>
+                      {/* {product[1].total} */}
                     </div>
                   </div>
-                  <button onClick={() => this.handleDelete(product[1].id)}>
-                    Remove from cart
-                  </button>
-                  {product[1].total}
                 </div>
               );
             })}

@@ -1,3 +1,18 @@
 // Place all the styles related to the api/orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cart-item-container{
+  margin-left: 20px;
+  display: flex;
+  width: 50%;
+  height: auto;
+  border-bottom: solid rgb(194, 194, 194) 1px;
+  font-size: 16px;
+  color: rgb(34, 34, 34);
+  font-family: "Graphik Webfont",-apple-system,"Helvetica Neue";
+}
+
+.cart-info{
+
+}
