@@ -229,3 +229,71 @@ border: 1px;
   font-size: 10px;
   color: #999999;
 }
+
+.purchased-form{
+  padding: 5px;
+  font-size: 14px;
+}
+.purchase-form-outer-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.purchase-form-outer-container > *{
+  text-align: center;
+}
+
+.aspca-link {
+
+  height: 100px;
+  width: 100px;
+  background: asset-url("aspca.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.aspca-link:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.205);
+}
+
+.project-links{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.project-links > *{
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.gnome-link {
+  height: 100px;
+  width: 130px;
+  background: asset-url("gnome.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gnome-link:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.205);
+}
+.arium-link {
+  height: 118px;
+  width: 100px;
+  background: asset-url("arium.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.arium-link:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.205);
+}
+
+.center-text{
+  margin-left: 10px;
+  text-align: right;
+}

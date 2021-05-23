@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
-import { closeModal } from "../../actions/modal_actions";
 
 const Greeting = ({ currentUser, logout, openModal, closeModal }) => {
   const sessionLinks = () => (
