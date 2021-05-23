@@ -165,6 +165,7 @@ class OrderForm extends React.Component {
           FREE
           </div>
         </div>
+          <div className="tiny-text">(To United States)</div>
         <br/>
         <button  className="show-cart-button" type="submit" value="Submit">Proceed to checkout</button>
             <div className="fine-print">* Additional duties and taxes may apply</div>
