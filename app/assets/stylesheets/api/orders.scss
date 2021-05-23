@@ -1,18 +1,138 @@
 // Place all the styles related to the api/orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.cart-container{
+display: flex;
+justify-content: center;
+}
 
 .cart-item-container{
+  align-items: center;
+  margin-top: 20px;
   margin-left: 20px;
   display: flex;
-  width: 50%;
+  // width: 50%;
   height: auto;
   border-bottom: solid rgb(194, 194, 194) 1px;
   font-size: 16px;
   color: rgb(34, 34, 34);
   font-family: "Graphik Webfont",-apple-system,"Helvetica Neue";
+  justify-content: space-between;
 }
 
 .cart-info{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  max-width: 300px;
+}
 
+.product-total{
+box-sizing: border-box;
+color: rgb(34, 34, 34);
+display: block;
+font-family: "Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans", Arial, sans-serif;
+font-size: 14px;
+height: 48px;
+line-height: 19.6px;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: none;
+margin-bottom: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+max-width: 80px;
+position: relative;
+text-align: left;
+text-size-adjust: 100%;
+transition-delay: 0s;
+transition-duration: 0.2s;
+transition-property: all;
+transition-timing-function: ease-out;
+width: 80px;
+-webkit-font-smoothing: antialiased;
+border: 1px;
+}
+
+.total-select{
+  text-align: center;
+  transition: border-color 200ms ease-out,box-shadow 200ms ease-out;
+  box-shadow: 0 1px 6px 0 rgba(34, 34, 34, 0.15);
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  height: 48px;
+  padding-left: 12px;
+  padding-right: 36px;
+  width: 100%;
+  border-radius: 6px;
+  background: #FFFFFF;
+  border-color: rgba(34, 34, 34, 0.15);
+  border-style: solid;
+  border-width: 1px;
+  color: #222222;
+  text-indent: 0.01px;
+  text-overflow: "";
+  cursor: pointer;
+  white-space: pre;
+  min-width: 80px;
+  content: "";
+}
+
+.total-select{
+  -webkit-appearance: none;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right rgb(255, 255, 255);
+  background-size: 20%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-position-x: 54px;
+}
+
+.select-and-remove{
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  align-items: center;
+}
+.select-and-remove > *{
+  margin-top: 20px;
+}
+.card-and-info{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.checkout-box{
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  box-shadow: rgba(34, 34, 34, 0.15) 0px 4px 20px 0px;
+  box-sizing: border-box;
+  color: rgb(34, 34, 34);
+  display: block;
+  font-family: "Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  height: 495.866px;
+  line-height: 19.6px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-bottom: 18px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 18px;
+  text-align: left;
+  text-size-adjust: 100%;
+  width: 364.972px;
+  -webkit-font-smoothing: antialiased;
+  margin-left:36px;
+  margin-top: 36px;
 }
