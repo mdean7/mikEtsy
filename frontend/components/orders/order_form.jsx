@@ -20,6 +20,7 @@ class OrderForm extends React.Component {
   }
 
   render() {
+    let subtotal = 0;
     if (!this.props.products) {
       return null;
     }
@@ -43,11 +44,15 @@ class OrderForm extends React.Component {
     }
     return (
       <div className='cart-container'>
+     
         {orderProducts.length > 0 && this.props.currentUserId ? (
           <div>
+            <div className="items-in-cart">
             {orderProducts.length}{" "}
             {orderProducts.length === 1 ? "item" : "items"} in your cart
+            </div>
             {orderProducts.map((product) => {
+              subtotal += (product[0].price * product[1].total)
               return (
                 <div
                   key={Math.floor((product[1].id + 3) * 100000 * Math.random())}
@@ -60,11 +65,12 @@ class OrderForm extends React.Component {
                         (product[1].description + 1) * 100000 * Math.random()
                         )}
                         product={product[0]}
+                        order={product[1]}
                         currentUserId={this.props.currentUserId}
                         />
                     <div className="cart-info">
-                      <div>{product[0].title} </div>
-                      <div>{product[0].description} </div>
+                      <div className="order-title">{product[0].title} </div>
+                      <div className="order-description">{product[0].description} </div>
                     </div>
                         </div>
                       {/* {product[1].total} */}
@@ -103,9 +109,60 @@ class OrderForm extends React.Component {
           </div>
         )}
         <div className='checkout-box'>How you'll pay
-          <radio></radio>
-            
-
+     
+          <br/>
+          <div className="radio-pay">
+        <input name="cards" type="radio" />
+        <label  >
+          <div className="card1">            
+          </div>        
+          </label>
+          </div>
+        <br/>
+        <div className="radio-pay">
+        <input name="cards" type="radio" />
+        <label  >
+          <div className="card2">            
+          </div>        
+          </label>
+          </div>
+        <br/>  
+        <div className="radio-pay">
+        <input name="cards" type="radio" />
+        <label  >
+          <div className="card3">            
+          </div>        
+          </label>
+          </div>
+           <br/>
+           <div className="subtotals">
+          <div className="subtotal-actual">
+          Item(s) total  
+          </div>
+          <div className="subtotal-actual">
+          {"$"+subtotal}
+          </div>
+        </div>
+           <div className="dividing-bar"></div>
+        <div className="subtotals">
+          <div className="subtotal-text">
+          Subtotal  
+          </div>
+          <div className="subtotal-actual">
+          {"$"+subtotal}
+          </div>
+        </div>
+        <div className="shippings subtotals">
+          <div className="shipping-text subtotal-actual">
+          Shipping  
+          </div>
+          <div className="shipping-actual subtotal-actual">
+          FREE
+          </div>
+        </div>
+        <br/>
+        <button  className="show-cart-button" type="submit" value="Submit">Proceed to checkout</button>
+            <div className="fine-print">* Additional duties and taxes may apply</div>
         </div>
       </div>
     );

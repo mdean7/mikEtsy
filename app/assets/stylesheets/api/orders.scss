@@ -6,6 +6,18 @@ display: flex;
 justify-content: center;
 }
 
+.items-in-cart{
+  margin-left: 30px;
+  margin-top: 50px;
+  color: rgb(22, 22, 22);
+  display: block;
+  font-family: "Graphik Webfont",-apple-system,"Helvetica Neue";
+  letter-spacing: 0.5px;
+  font-size: 28px;
+  line-height: 28px;
+  height: 36px;;
+}
+
 .cart-item-container{
   align-items: center;
   margin-top: 20px;
@@ -134,5 +146,63 @@ border: 1px;
   width: 364.972px;
   -webkit-font-smoothing: antialiased;
   margin-left:36px;
-  margin-top: 36px;
+  margin-top: 66px;
+}
+
+.subtotals{
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+.subtotal-actual{
+  font-weight: normal;
+}
+.card1 {
+  height: 33px;
+  width: 200px;
+  background: asset-url("cards1.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card2 {
+  height: 33px;
+  width: 50px;
+  background: asset-url("cards2.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card3 {
+  height: 33px;
+  width: 200px;
+  background: asset-url("cards3.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.radio-pay{
+  display: flex;
+}
+
+.dividing-bar{
+  width: 100%;
+  height: 1px;
+  border-top: solid rgb(194, 194, 194) 1px;
+}
+.fine-print{
+  margin-top: 20px;
+  font-weight: lighter;
+  font-size: 14px;
+  text-align: center;
+}
+.order-title{
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+
+}
+.order-description{
+  font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
 }

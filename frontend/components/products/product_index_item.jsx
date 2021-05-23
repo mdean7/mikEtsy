@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProductIndexItem = ({ product, deleteProduct, currentUserId,}) => {
+const ProductIndexItem = ({ product, deleteProduct, currentUserId,order}) => {
  
   return (
     <div className="card-item">      
@@ -10,7 +10,7 @@ const ProductIndexItem = ({ product, deleteProduct, currentUserId,}) => {
           <img className="splash-images" src={product.photoUrl} alt="" />
           </div>
           <div className="product-info">
-          {'$'}{product.price}          
+            {order ? '' : "$"+product.price}        
           </div>
         </Link> 
       
