@@ -88,7 +88,12 @@ class OrderForm extends React.Component {
                         <button onClick={() => this.handleDelete(product[1].id)}>
                           Remove
                         </button>
+                        <div className="total-per-item">
                         {"$" + product[0].price * product[1].total}
+                        </div>
+                        <div className="per-item">
+                        {product[1].total > 1 ? '($'+product[0].price+' each)':''}
+                        </div>
                       </div>
                   </div>
                   {/* above this point you have access to mapped products and order */}
@@ -156,7 +161,7 @@ class OrderForm extends React.Component {
           <div className="shipping-text subtotal-actual">
           Shipping  
           </div>
-          <div className="shipping-actual subtotal-actual">
+          <div className="shipping-actual subtotal-actual free">
           FREE
           </div>
         </div>
