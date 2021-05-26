@@ -124,16 +124,19 @@ class ProductsShow extends React.Component {
             } */}
 
             <br />
+            {this.props.currentUserId ? 
+            
             <Link
-              to={{
-                pathname: "/reviews/new",
-                state: {
-                  product: this.props.product,
+            to={{
+              pathname: "/reviews/new",
+              state: {
+                product: this.props.product,
                 },
               }}
-            >
+              >
               <button>Leave a review</button>
             </Link>
+            : null}
             <br />
             <div className="show-details">Details</div>
             <div className="show-description">
