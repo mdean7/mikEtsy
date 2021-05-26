@@ -65,6 +65,19 @@ const App = () => (
       <a href="https://github.com/mdean7/mikEtsy">
           <i className="fab fa-github git-icon"> </i>
           </a>
+          <a href="https://www.linkedin.com/in/michael-dean-717931185/">
+          <i className="fab fa-linkedin git-icon"> </i>
+          </a>
+          <a href="https://michael-dean.dev">
+          <i className="fas fa-user-tie git-icon"> </i>
+     
+          </a>
+          <a href="https://angel.co/u/michael-dean-28">
+          <i className="fab fa-angellist git-icon"> </i>
+          </a>
+          <a href="https://app.joinhandshake.com/users/31750773">
+          <i className="fas fa-handshake git-icon"> </i>
+          </a>
       </div>
     </footer>
   </div>
