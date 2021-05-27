@@ -38,6 +38,7 @@ class User < ApplicationRecord
   validates :username, :password_digest, :session_token, :email, presence: true
   validates :username, :email, :session_token, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
+  validates :email, :email_format => { :message => ' must contain an @ and .com or equivalent' }
   
   attr_reader :password
   after_initialize :ensure_session_token
