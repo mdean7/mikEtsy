@@ -9,6 +9,7 @@ class ProductIndex extends React.Component {
 
   componentDidMount() {
     this.props.requestProducts();
+    this.props.requestUsers();
   }
 
   renderErrors() {
@@ -22,6 +23,7 @@ class ProductIndex extends React.Component {
   }
 
   render() {
+    
     return (
       <div className="splash-container">
         <div className="colorBar">
@@ -41,6 +43,7 @@ class ProductIndex extends React.Component {
             product={product}
             deleteProduct={this.props.deleteProduct}
             currentUserId={this.props.currentUserId}
+            owner={this.props.owners[product.user_id]}  
             />
             </div>
 
@@ -59,6 +62,7 @@ class ProductIndex extends React.Component {
               product={product}
               deleteProduct={this.props.deleteProduct}
               currentUserId={this.props.currentUserId}
+              owner={this.props.owners[product.user_id]}            
             />
             : ''
           ))}
@@ -78,6 +82,7 @@ class ProductIndex extends React.Component {
   product={product}
   deleteProduct={this.props.deleteProduct}
   currentUserId={this.props.currentUserId}
+  owner={this.props.owners[product.user_id]}  
   />
   </div>
 
@@ -95,6 +100,7 @@ class ProductIndex extends React.Component {
             product={product}
             deleteProduct={this.props.deleteProduct}
             currentUserId={this.props.currentUserId}
+            owner={this.props.owners[product.user_id]}  
             />
             : ''
             ))}
