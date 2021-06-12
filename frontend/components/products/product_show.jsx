@@ -13,7 +13,7 @@ class ProductsShow extends React.Component {
   componentDidMount() {
     this.props.requestUsers();
     this.props.requestReviews();
-    this.props.requestOrders();
+   if(this.props.currentUserId){ this.props.requestOrders()};
     this.props.requestProduct(this.props.match.params.productId);
   }
 
