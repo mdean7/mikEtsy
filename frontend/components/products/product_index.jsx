@@ -50,9 +50,9 @@ class ProductIndex extends React.Component {
             : ''
             ))}
 
-            </div>
-          
+            </div>          
         </div>
+        
         <div className="item-grid-container">
           <div className="block-grid-item">
 
@@ -68,7 +68,7 @@ class ProductIndex extends React.Component {
           ))}
           </div>
         </div>
-        
+     
         <div className="recentImages">
           <h1 className="recent-img-text">Recently sold items</h1>
           <h3>Check out our spring baskets sale!</h3>
@@ -106,6 +106,7 @@ class ProductIndex extends React.Component {
             ))}
             </div>
         </div>
+ 
       </div>
     );
   }
