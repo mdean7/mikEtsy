@@ -9,6 +9,7 @@ class ProductIndex extends React.Component {
 
   componentDidMount() {
     this.props.requestProducts();
+    this.props.requestUsers();
   }
 
   renderErrors() {
@@ -22,6 +23,7 @@ class ProductIndex extends React.Component {
   }
 
   render() {
+    
     return (
       <div className="splash-container">
         <div className="colorBar">
@@ -41,15 +43,16 @@ class ProductIndex extends React.Component {
             product={product}
             deleteProduct={this.props.deleteProduct}
             currentUserId={this.props.currentUserId}
+            owner={this.props.owners[product.user_id]}  
             />
             </div>
 
             : ''
             ))}
 
-            </div>
-          
+            </div>          
         </div>
+        
         <div className="item-grid-container">
           <div className="block-grid-item">
 
@@ -59,12 +62,13 @@ class ProductIndex extends React.Component {
               product={product}
               deleteProduct={this.props.deleteProduct}
               currentUserId={this.props.currentUserId}
+              owner={this.props.owners[product.user_id]}            
             />
             : ''
           ))}
           </div>
         </div>
-        
+     
         <div className="recentImages">
           <h1 className="recent-img-text">Recently sold items</h1>
           <h3>Check out our spring baskets sale!</h3>
@@ -78,6 +82,7 @@ class ProductIndex extends React.Component {
   product={product}
   deleteProduct={this.props.deleteProduct}
   currentUserId={this.props.currentUserId}
+  owner={this.props.owners[product.user_id]}  
   />
   </div>
 
@@ -95,11 +100,13 @@ class ProductIndex extends React.Component {
             product={product}
             deleteProduct={this.props.deleteProduct}
             currentUserId={this.props.currentUserId}
+            owner={this.props.owners[product.user_id]}  
             />
             : ''
             ))}
             </div>
         </div>
+ 
       </div>
     );
   }

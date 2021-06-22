@@ -2,8 +2,10 @@
   font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
   margin-left: 12%;
   margin-right: 12%;
-  min-height: 800px;
+  min-height: 700px;
   overflow: hidden;
+
+  margin-bottom: 10px;
 }
 // all the items
 .block-grid-item{
@@ -17,7 +19,7 @@
 .card-item{
 // position: relative;
   width: 215px;
-  height: 196px;
+  height: 296px;
   margin: 10px;
   margin-bottom: 50px;
 
@@ -35,14 +37,14 @@
   position: relative;
   display: block;
   border-radius: 3px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
 
 &:hover{
-  transform: scale(1.08, 1.08);
-  -moz-box-shadow: 5px 5px 5px #ccc;
-  -webkit-box-shadow: 5px 5px 5px #ccc;
-  box-shadow: 5px 5px 5px #ccc;
+  transform: scale(1.0, 1.0);
+  -moz-box-shadow: 0 0 15px 5px #ccc;
+  -webkit-box-shadow: 0 0 15px 5px #ccc;
+  box-shadow: 0 0 15px 5px #ccc;
   -moz-border-radius:3px;
   -webkit-border-radius:3px;
   border-radius:3px;
@@ -72,4 +74,8 @@
   font-weight: 300;
   font-size: 22px;
   line-height: 36px;
+}
+
+.owner{
+  color: rgb(173, 173, 173);
 }

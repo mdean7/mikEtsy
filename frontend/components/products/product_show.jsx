@@ -13,7 +13,7 @@ class ProductsShow extends React.Component {
   componentDidMount() {
     this.props.requestUsers();
     this.props.requestReviews();
-    this.props.requestOrders();
+   if(this.props.currentUserId){ this.props.requestOrders()};
     this.props.requestProduct(this.props.match.params.productId);
   }
 
@@ -124,16 +124,19 @@ class ProductsShow extends React.Component {
             } */}
 
             <br />
+            {this.props.currentUserId ? 
+            
             <Link
-              to={{
-                pathname: "/reviews/new",
-                state: {
-                  product: this.props.product,
+            to={{
+              pathname: "/reviews/new",
+              state: {
+                product: this.props.product,
                 },
               }}
-            >
+              >
               <button>Leave a review</button>
             </Link>
+            : null}
             <br />
             <div className="show-details">Details</div>
             <div className="show-description">
