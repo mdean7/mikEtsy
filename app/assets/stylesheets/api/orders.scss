@@ -1,24 +1,24 @@
 // Place all the styles related to the api/orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.cart-container{
-display: flex;
-justify-content: center;
+.cart-container {
+  display: flex;
+  justify-content: center;
 }
 
-.items-in-cart{
+.items-in-cart {
   margin-left: 30px;
   margin-top: 50px;
   color: rgb(22, 22, 22);
   display: block;
-  font-family: "Graphik Webfont",-apple-system,"Helvetica Neue";
+  font-family: "Graphik Webfont", -apple-system, "Helvetica Neue";
   letter-spacing: 0.5px;
   font-size: 28px;
   line-height: 28px;
-  height: 36px;;
+  height: 36px;
 }
 
-.cart-item-container{
+.cart-item-container {
   align-items: center;
   margin-top: 20px;
   margin-left: 20px;
@@ -28,48 +28,49 @@ justify-content: center;
   border-bottom: solid rgb(194, 194, 194) 1px;
   font-size: 16px;
   color: rgb(34, 34, 34);
-  font-family: "Graphik Webfont",-apple-system,"Helvetica Neue";
+  font-family: "Graphik Webfont", -apple-system, "Helvetica Neue";
   justify-content: space-between;
 }
 
-.cart-info{
+.cart-info {
   display: flex;
   flex-direction: column;
   align-items: left;
   max-width: 300px;
 }
 
-.product-total{
-box-sizing: border-box;
-color: rgb(34, 34, 34);
-display: block;
-font-family: "Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans", Arial, sans-serif;
-font-size: 14px;
-height: 48px;
-line-height: 19.6px;
-list-style-image: none;
-list-style-position: outside;
-list-style-type: none;
-margin-bottom: 0px;
-margin-left: 0px;
-margin-right: 0px;
-margin-top: 0px;
-max-width: 80px;
-position: relative;
-text-align: left;
-text-size-adjust: 100%;
-transition-delay: 0s;
-transition-duration: 0.2s;
-transition-property: all;
-transition-timing-function: ease-out;
-width: 80px;
--webkit-font-smoothing: antialiased;
-border: 1px;
+.product-total {
+  box-sizing: border-box;
+  color: rgb(34, 34, 34);
+  display: block;
+  font-family: "Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans",
+    Arial, sans-serif;
+  font-size: 14px;
+  height: 48px;
+  line-height: 19.6px;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  max-width: 80px;
+  position: relative;
+  text-align: left;
+  text-size-adjust: 100%;
+  transition-delay: 0s;
+  transition-duration: 0.2s;
+  transition-property: all;
+  transition-timing-function: ease-out;
+  width: 80px;
+  -webkit-font-smoothing: antialiased;
+  border: 1px;
 }
 
-.total-select{
+.total-select {
   text-align: center;
-  transition: border-color 200ms ease-out,box-shadow 200ms ease-out;
+  transition: border-color 200ms ease-out, box-shadow 200ms ease-out;
   box-shadow: 0 1px 6px 0 rgba(34, 34, 34, 0.15);
   display: block;
   font-family: inherit;
@@ -79,7 +80,7 @@ border: 1px;
   padding-right: 36px;
   width: 100%;
   border-radius: 6px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-color: rgba(34, 34, 34, 0.15);
   border-style: solid;
   border-width: 1px;
@@ -92,9 +93,10 @@ border: 1px;
   content: "";
 }
 
-.total-select{
+.total-select {
   -webkit-appearance: none;
-  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right rgb(255, 255, 255);
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png)
+    no-repeat right rgb(255, 255, 255);
   background-size: 20%;
   position: absolute;
   top: 50%;
@@ -102,22 +104,22 @@ border: 1px;
   background-position-x: 54px;
 }
 
-.select-and-remove{
+.select-and-remove {
   display: flex;
   flex-direction: column;
   padding: 50px;
   align-items: center;
 }
-.select-and-remove > *{
+.select-and-remove > * {
   margin-top: 20px;
 }
-.card-and-info{
+.card-and-info {
   display: flex;
   align-items: center;
   justify-content: left;
 }
 
-.checkout-box{
+.checkout-box {
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
   border-top-left-radius: 18px;
@@ -126,7 +128,8 @@ border: 1px;
   box-sizing: border-box;
   color: rgb(34, 34, 34);
   display: block;
-  font-family: "Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans", Arial, sans-serif;
+  font-family: "Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans",
+    Arial, sans-serif;
   font-size: 16px;
   font-weight: 700;
   height: 495.866px;
@@ -145,17 +148,17 @@ border: 1px;
   text-size-adjust: 100%;
   width: 364.972px;
   -webkit-font-smoothing: antialiased;
-  margin-left:36px;
+  margin-left: 36px;
   margin-top: 66px;
 }
 
-.subtotals{
+.subtotals {
   display: flex;
   justify-content: space-between;
   margin: 15px;
 }
 
-.subtotal-actual{
+.subtotal-actual {
   font-weight: normal;
 }
 .card1 {
@@ -179,62 +182,63 @@ border: 1px;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.radio-pay{
+.radio-pay {
   display: flex;
 }
 
-.dividing-bar{
+.dividing-bar {
   width: 100%;
   height: 1px;
   border-top: solid rgb(194, 194, 194) 1px;
 }
-.fine-print{
+.fine-print {
   margin-top: 20px;
   font-weight: lighter;
   font-size: 14px;
   text-align: center;
 }
-.order-title{
+.order-title {
   font-weight: 400;
   font-size: 16px;
-  font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
-
+  font-family: "Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans",
+    Arial, sans-serif;
 }
-.order-description{
-  font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+.order-description {
+  font-family: "Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans",
+    Arial, sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
 }
 
-.total-per-item{
- font-weight: 700;
+.total-per-item {
+  font-weight: 700;
   font-size: 18px;
   color: #222222;
 }
 
-.per-item{
+.per-item {
   margin-top: 5px;
   font-size: 14px;
   color: #999999;
 }
 
-.free{
+.free {
   color: green;
 }
 
-.tiny-text{
+.tiny-text {
   margin-top: -10px;
   margin-left: 15px;
   font-size: 10px;
   color: #999999;
 }
 
-.purchased-form{
+.purchased-form {
   padding: 5px;
   font-size: 14px;
 }
-.purchase-form-outer-container{
+.purchase-form-outer-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -242,12 +246,11 @@ border: 1px;
   text-align: center;
 }
 
-.purchase-form-outer-container > *{
+.purchase-form-outer-container > * {
   text-align: center;
 }
 
 .aspca-link {
-
   height: 100px;
   width: 100px;
   background: asset-url("aspca.jpg");
@@ -259,13 +262,12 @@ border: 1px;
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.205);
 }
 
-.project-links{
+.project-links {
   display: flex;
   justify-content: space-between;
-
 }
 
-.project-links > *{
+.project-links > * {
   margin-right: 20px;
   margin-top: 20px;
 }
@@ -293,12 +295,12 @@ border: 1px;
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.205);
 }
 
-.center-text{
+.center-text {
   margin-left: 10px;
   text-align: right;
 }
 
-.empty-cart{
+.empty-cart {
   font-size: 30px;
   margin: 40px;
 }
