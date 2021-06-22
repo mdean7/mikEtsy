@@ -14,6 +14,7 @@ a, a:hover, a:focus, a:active {
   background: rgb(227, 243, 245);
   padding: 50px;
 }
+
 .list-sidebar{
   padding-top: 20px;
   border-radius: 3px;
@@ -27,6 +28,7 @@ a, a:hover, a:focus, a:active {
   margin-right: 90px;
   padding-right: 10px;
 }
+
 .listings-sidebar{
   color: #424242;
   text-align: center;
@@ -73,6 +75,7 @@ a, a:hover, a:focus, a:active {
   line-height: 20px;
 
 }
+
 .free-shipping{
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
@@ -95,6 +98,7 @@ a, a:hover, a:focus, a:active {
   display: flex;
   align-content: space-between;
 }
+
 .user-product-list-container > h2{
     border-radius: 3px;
     background-color: #FFF;
@@ -112,6 +116,7 @@ a, a:hover, a:focus, a:active {
   width: 250px; 
   height: 300px;
 }
+
 .card-body-display-block{
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
@@ -119,6 +124,7 @@ a, a:hover, a:focus, a:active {
   display: block;
   text-size-adjust: 100%
 }
+
 .card-img-wrap{
    padding: 3px;
     // background-color:white;
@@ -129,6 +135,7 @@ a, a:hover, a:focus, a:active {
     display: flex;
     justify-content: center;
 }
+
 .idx-images{
   display: block;
   vertical-align: top;
@@ -155,16 +162,15 @@ a, a:hover, a:focus, a:active {
   --vh: 7.35px;
   box-sizing: inherit;
 }
+
 .card-edit{
   display: inline;
 }
+
 .card-delete{
   display: inline;
 }
 
-.user-product-list-items{
-  
-}
 .block-grid{
   font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
   display: grid;
@@ -176,6 +182,7 @@ a, a:hover, a:focus, a:active {
   width: 100%;
   padding-left: 0;
 }
+
 .block-grid-item{
   font-size: 14px;
   margin-bottom: 0px;
@@ -196,13 +203,12 @@ a, a:hover, a:focus, a:active {
 font-size: 14px;
 font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
 }
+
 .card-price{
   font-size: 12px;
 }
+
 .card-meta-row{
   text-align: left;
   padding-left: 10px;
-}
-.page-view{
-
 }
