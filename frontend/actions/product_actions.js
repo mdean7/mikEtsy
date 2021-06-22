@@ -1,6 +1,5 @@
 import * as ProductAPIUtil from '../util/product_api_util';
 
-
 export const RECEIVE_PRODUCTS = "RECEIVE_PRODUCTS";
 export const RECEIVE_PRODUCT = "RECEIVE_PRODUCT";
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
@@ -34,7 +33,6 @@ export const createProduct = (product) => (dispatch)=> (
   ProductAPIUtil.createProduct(product)
   .then((product) => dispatch(receiveProduct(product)))
 );
-
 
 export const updateProduct = (product, id) => (dispatch)=> (
   ProductAPIUtil.updateProduct(product, id)
