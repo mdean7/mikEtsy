@@ -1,26 +1,30 @@
 // Place all the styles related to the api/products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-a, a:hover, a:focus, a:active {
+a,
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
   color: inherit;
 }
 
-.user-shop{
-  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+.user-shop {
+  font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, "Roboto",
+    "Droid Sans", "Segoe UI", "Helvetica", Arial, sans-serif;
 }
 
-.welcome-name{
+.welcome-name {
   background: rgb(227, 243, 245);
   padding: 50px;
 }
 
-.list-sidebar{
+.list-sidebar {
   padding-top: 20px;
   border-radius: 3px;
-  background-color: #FFF;
-  border: 1px solid #E1E3DF;
-  border-bottom-color: #CBCCC9;
+  background-color: #fff;
+  border: 1px solid #e1e3df;
+  border-bottom-color: #cbccc9;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,21 +33,23 @@ a, a:hover, a:focus, a:active {
   padding-right: 10px;
 }
 
-.listings-sidebar{
+.listings-sidebar {
   color: #424242;
   text-align: center;
   margin: 0;
   width: 97px;
-  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, "Roboto",
+    "Droid Sans", "Segoe UI", "Helvetica", Arial, sans-serif;
 }
 
-.add-listing-button{
+.add-listing-button {
   all: revert;
   color: whitesmoke;
   background-color: rgb(12, 12, 12);
   cursor: pointer;
   display: inline-block;
-  font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, Roboto, "Droid Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, Roboto,
+    "Droid Sans", "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: 700;
   height: 37.9972px;
@@ -53,14 +59,14 @@ a, a:hover, a:focus, a:active {
   width: 95.9517px;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  &:hover{
+  &:hover {
     background-color: rgb(42, 42, 42);
     outline: none;
     border: yellow;
   }
 }
 
-.bold-shipping{
+.bold-shipping {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   text-align: left;
@@ -73,70 +79,69 @@ a, a:hover, a:focus, a:active {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-
 }
 
-.free-shipping{
+.free-shipping {
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   font-size: 13px;
-    line-height: 1.4;
-    -webkit-font-smoothing: antialiased;
-  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, "Roboto",
+    "Droid Sans", "Segoe UI", "Helvetica", Arial, sans-serif;
   display: block;
   margin: 0;
-  background-color: #D7E6F5;
+  background-color: #d7e6f5;
   border-radius: 6px;
   border-color: #0000001a;
   border: 1px transparent solid;
   padding: 22px;
   margin-bottom: 12px;
-  
 }
 
-.user-product-list-container{
+.user-product-list-container {
   display: flex;
   align-content: space-between;
 }
 
-.user-product-list-container > h2{
-    border-radius: 3px;
-    background-color: #FFF;
-    border: 1px solid #E1E3DF;
-    border-bottom-color: #CBCCC9;
+.user-product-list-container > h2 {
+  border-radius: 3px;
+  background-color: #fff;
+  border: 1px solid #e1e3df;
+  border-bottom-color: #cbccc9;
 }
 
-.card{
+.card {
   display: inline-block;
   border-radius: 3px;
-  background-color: #FFF;
-  border: 1px solid #E1E3DF;
-  border-bottom-color: #CBCCC9;
+  background-color: #fff;
+  border: 1px solid #e1e3df;
+  border-bottom-color: #cbccc9;
   margin: 1px;
-  width: 250px; 
+  width: 250px;
   height: 300px;
 }
 
-.card-body-display-block{
+.card-body-display-block {
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
   position: relative;
   display: block;
-  text-size-adjust: 100%
+  text-size-adjust: 100%;
 }
 
-.card-img-wrap{
-   padding: 3px;
-    // background-color:white;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    display: flex;
-    justify-content: center;
+.card-img-wrap {
+  padding: 3px;
+  // background-color:white;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
 }
 
-.idx-images{
+.idx-images {
   display: block;
   // vertical-align: top;
   border-radius: 8px;
@@ -145,14 +150,14 @@ a, a:hover, a:focus, a:active {
   max-width: 250px;
   max-width: 99%;
   margin-left: 0.5%;
-  &:hover{
+  &:hover {
     filter: brightness(90%);
   }
 }
 
-.card-functions{
+.card-functions {
   width: 100%;
-  border-top: 1px solid #E1E3DF;
+  border-top: 1px solid #e1e3df;
   display: flex;
   text-align: center;
   justify-content: space-evenly;
@@ -163,16 +168,17 @@ a, a:hover, a:focus, a:active {
   box-sizing: inherit;
 }
 
-.card-edit{
+.card-edit {
   display: inline;
 }
 
-.card-delete{
+.card-delete {
   display: inline;
 }
 
-.block-grid{
-  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+.block-grid {
+  font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, "Roboto",
+    "Droid Sans", "Segoe UI", "Helvetica", Arial, sans-serif;
   display: grid;
   grid-template-columns: auto auto auto;
   list-style-type: disc;
@@ -183,7 +189,7 @@ a, a:hover, a:focus, a:active {
   padding-left: 0;
 }
 
-.block-grid-item{
+.block-grid-item {
   font-size: 14px;
   margin-bottom: 0px;
   margin-left: 0px;
@@ -195,20 +201,21 @@ a, a:hover, a:focus, a:active {
   padding-top: 9px;
   text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  height:296px;
-  width:311px;
+  height: 296px;
+  width: 311px;
 }
 
-.card-title{
-font-size: 14px;
-font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+.card-title {
+  font-size: 14px;
+  font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, "Roboto",
+    "Droid Sans", "Segoe UI", "Helvetica", Arial, sans-serif;
 }
 
-.card-price{
+.card-price {
   font-size: 12px;
 }
 
-.card-meta-row{
+.card-meta-row {
   text-align: left;
   padding-left: 10px;
 }
