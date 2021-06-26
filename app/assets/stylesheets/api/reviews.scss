@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.review-items-container{
+.review-items-container {
   margin-top: 20px;
   display: flex;
   justify-content: flex-start;
@@ -15,69 +15,59 @@
 
 .review-title {
   font-size: 26px;
-  font-family: 'Guardian-EgypTT', serif;
+  font-family: "Guardian-EgypTT", serif;
   margin-bottom: 10px;
-
 }
 
-.review-item-card{
+.review-item-card {
   padding: 10px;
   padding-left: 20px;
 }
 
-.review-date-conatiner{
-max-width: 20%;
-display: flex;
-justify-content: space-between;
+.review-date-conatiner {
+  max-width: 20%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.review-date{
-  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+.review-date {
+  font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, "Roboto",
+    "Droid Sans", "Segoe UI", "Helvetica", Arial, sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
 }
 
-.review-info{
-
+.review-info {
 }
 
-.rating-container{
-
+.rating-container {
 }
 
-.rating-stars1{
-
+.rating-stars1 {
 }
 
-.rating-stars2{
-
+.rating-stars2 {
 }
 
-.title-container{
-
+.title-container {
 }
 
-.title-outer1{
-
+.title-outer1 {
 }
 
-.title-inner2{
-
+.title-inner2 {
 }
 
-.body-container{
-
+.body-container {
 }
 
-.body-outer1{
-
+.body-outer1 {
 }
 
-.body-inner2{
-
+.body-inner2 {
 }
-.review-pair{
+.review-pair {
   display: flex;
   justify-content: flex-start;
   // border: solid black 1px;
