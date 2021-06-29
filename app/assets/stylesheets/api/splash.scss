@@ -1,5 +1,6 @@
-.item-grid-container{
-  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+.item-grid-container {
+  font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, "Roboto",
+    "Droid Sans", "Segoe UI", "Helvetica", Arial, sans-serif;
   margin-left: 12%;
   margin-right: 12%;
   min-height: 700px;
@@ -8,30 +9,27 @@
   margin-bottom: 10px;
 }
 // all the items
-.block-grid-item{
+.block-grid-item {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 //individual items
-.card-item{
-// position: relative;
+.card-item {
+  // position: relative;
   width: 215px;
   height: 296px;
   margin: 10px;
   margin-bottom: 50px;
-
 }
 //image and its height holder
-.height-placeholder{
+.height-placeholder {
   height: 197px;
   width: auto;
-
 }
 
-.splash-images{
+.splash-images {
   height: 100%;
   width: 100%;
   position: relative;
@@ -39,28 +37,25 @@
   border-radius: 3px;
   transition: all 0.2s ease-in-out;
 
+  &:hover {
+    transform: scale(1, 1);
+    -moz-box-shadow: 0 0 15px 5px #ccc;
+    -webkit-box-shadow: 0 0 15px 5px #ccc;
+    box-shadow: 0 0 15px 5px #ccc;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+  }
 
-&:hover{
-  transform: scale(1.0, 1.0);
-  -moz-box-shadow: 0 0 15px 5px #ccc;
-  -webkit-box-shadow: 0 0 15px 5px #ccc;
-  box-shadow: 0 0 15px 5px #ccc;
-  -moz-border-radius:3px;
-  -webkit-border-radius:3px;
-  border-radius:3px;
-}
-
-&:hover::after {
-  opacity: 100%;
-}
-
+  &:hover::after {
+    opacity: 100%;
+  }
 }
 
 //price
-.product-info{
+.product-info {
   padding-top: 10px;
   font-size: 16px;
-
 }
 
 .ports {
@@ -68,14 +63,14 @@
   margin: 5px;
 }
 
-.recent-img-text{
+.recent-img-text {
   color: black;
-  font-family: "Guardian-EgypTT",serif;
+  font-family: "Guardian-EgypTT", serif;
   font-weight: 300;
   font-size: 22px;
   line-height: 36px;
 }
 
-.owner{
+.owner {
   color: rgb(173, 173, 173);
 }
