@@ -1,7 +1,9 @@
 // Place all the styles related to the api/reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+.review-form-container{
+  margin: 8%
+}
 .review-items-container {
   margin-top: 20px;
   display: flex;
