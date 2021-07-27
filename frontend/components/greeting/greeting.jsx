@@ -29,6 +29,10 @@ const Greeting = ({ currentUser, logout, openModal, closeModal }) => {
             Sign out
           </button>
         </Link>
+<<<<<<< HEAD
+=======
+
+>>>>>>> ef513b241d87ee7fc5cb1aec6bac8fde2eca30c1
       </hgroup>
     );
   };
